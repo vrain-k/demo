@@ -1,0 +1,387 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+    font-family: "Noto Sans JP", sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    color: #333333;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, p, blockquote, table, th, td, a {
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+    background-repeat: no-repeat;
+}
+
+body {
+	font-size: 16px;
+/*  background-color: #f1f1f1;*/
+}
+
+a {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  vertical-align: top;
+}
+
+
+/* ↓デモ02用↓ */
+/* ヘッダー部分 */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+  display: flex;  
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.top-header__logo-inner {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 175px;
+}
+
+.top-header__menu-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+/*  align-items: center;
+  gap: 20px;*/
+}
+
+.menu01 {
+  background-color: #ECF3FA;
+  border-radius: 0 0 0 8px;
+  height: 60px;
+}
+
+.menu01_a {
+  width: 210px;
+  height: 60px;
+  background-color: #4DA6FF;
+}
+
+.menu01-list01 {
+  padding-top: 18px;
+  margin-left: 30px;
+}
+
+.menu01-list01 a:hover {
+  opacity: 0.8;
+}
+
+.menu01-list02 {
+  padding-top: 18px;
+  margin-left: 30px;
+  margin-right: 100px;
+}
+
+.menu01-list02 a:hover {
+  opacity: 0.8;
+}
+
+.menu01-btn a {
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 210px;
+  height: 60px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.menu01-button01 {
+  background-color: #4DA6FF;
+}
+
+.menu01-button01 a:hover {
+  background-color: #78b4ff;
+}
+
+.menu01-button02 {
+  background-color: #207ACE;
+}
+
+.menu01-button02 a:hover {
+  background-color: #5b8ed7;
+}
+
+.menu01-button03 {
+  background-color: #0F2B49;
+}
+
+.menu01-button03 a:hover {
+  background-color: #384965;
+}
+
+.menu02 {
+  height: 32px;
+  padding-top: 8px;
+  margin-right: 25px;
+}
+
+.menu02 ul {
+  margin-right: 25px;
+}
+
+.menu02 li {
+  margin-left: 40px;
+}
+
+.menu02 li a:hover {
+  opacity: 0.8;
+}
+
+.top-header__menu-inner ul {
+  display: flex;
+}
+
+.top-header__menu-inner li {
+  list-style: none;
+/*  margin-left: 20px;*/
+}
+/* ↑デモ02用↑ */
+
+/* サイドメニュー全体 */
+.side-menu {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 2px 0px 2px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #d3d3d3;
+  overflow: hidden;
+}
+
+/* li 初期状態 */
+.menu-item {
+  display: flex;
+  align-items: center;
+  width: 35px;           /* アイコン幅固定 */
+  height: 50px;
+  background: #fff;
+  color: #03122D;
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 0.5s ease, background 0.3s ease; /* 横幅の滑らか変化 */
+  padding-left: 15px;
+}
+
+.menu-item_line {
+  border-bottom: 2px solid #D3D3D3;
+}
+/* li hover背景色 */
+.menu-item:hover {
+  background: #F1F1F1;
+}
+
+/* サイドメニュー hoverで li 横幅拡張 */
+.side-menu:hover .menu-item {
+  width: 180px;
+}
+
+/* アイコン */
+.menu-item .icon img {
+  display: block;
+/*  margin: 0 10px;*/
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  text-align: center;
+}
+
+/* ラベル 初期は右に隠す */
+.menu-item .label {
+  opacity: 0;
+  transform: translateX(20px);
+  white-space: nowrap;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* サイドメニュー hoverでラベル表示 */
+.side-menu:hover .menu-item .label {
+  opacity: 1;
+  transform: translateX(0);
+  margin-left: 20px;
+}
+
+/* ページ下部CTA */
+.page__cta-container {
+  width: 100%;
+  background-color: #0C2B4A;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.page__cta-box {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.page__cta-box h3 {
+  text-align: center;
+}
+
+.page__cta-box hr {
+  width: 600px;
+  border: solid 1px #fff;
+  margin: 25px auto;
+}
+
+.page__cta-box p {
+  text-align: center;
+}
+
+.page__cta-list {
+  width: 1200px;
+  margin: 40px auto 0 auto;
+}
+
+.page__cta-list ul {
+  display: flex;
+  gap: 20px;
+}
+
+.page__cta-list li {
+  list-style-type: none;
+}
+
+.page__cta-libox {
+  position: relative;
+  width: 380px;
+  height: 180px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.page__cta-libox:hover {
+  background-color: #f4f9ff;
+  cursor: pointer;
+}
+
+.page__cta-libox::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 62px;
+  height: 62px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.page__cta-libox.icon-type1::after {
+  background-image: url("../img/icon-contact.png");
+}
+
+.page__cta-libox.icon-type2::after {
+  background-image: url("../img/icon-download.png");
+}
+
+.page__cta-libox.icon-type3::after {
+  background-image: url("../img/icon-freetest.png");
+}
+
+.page__cta-libox::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 20px;
+  background-image: url("../img/icon-right_arrow.png");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 28px;
+  display: block;
+}
+
+.page__cta-libox span {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #0C2B4A;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* demo04のCSS追記 */
+.lower__layer-MV {
+  margin-top: 100px;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  padding-bottom: 80px;
+}
+
+.page-side_menu {
+  flex: 0 0 300px;
+  top: 180px;
+  position: sticky;
+  align-self: flex-start;
+  border-top: #D3D3D3 2px solid;
+  background-color: #fff;
+}
+
+.page-side_menu ul {
+  list-style-type: none;
+}
+
+.page-side_menu li {
+  position: relative;
+  border-bottom: #D3D3D3 2px solid;
+}
+
+.page-side_menu li::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 0;
+  transform: translateX(-50%);  
+  background-image: url("../img/icon-li_rightarrow.png");
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 18px;
+  display: block;
+}
+
+.page-side_menu a {
+  display: block;
+  padding: 20px 0;
+  height: 20px;  
+}
+
+.page-side_menu a:hover {
+  background-color: #f4f9ff;
+  padding: 20px 0;
+  height: 20px;  
+}
+
+.main-contents {
+  width: 850px;
+}

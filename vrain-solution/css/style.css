@@ -87,6 +87,55 @@ img {
   gap: 10px;
 }
 
+/* ファーストビューだけボタンの色変更↓ */
+.top-header__menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 50px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #0f2b49;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.top-header__menu-button:hover {
+  background-color: #fff;
+  border: #0f2b49 solid 2px;
+  color: #0f2b49; 
+  font-weight: bold;
+}
+/* ファーストビューだけボタンの色変更↑*/
+
+/* ファーストビューすぎたボタンの色変更↓ */
+.top-header.scrolled .top-header__menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 50px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #0f2b49;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.top-header.scrolled .top-header__menu-button:hover {
+  background-color: #fff;
+  border: #0f2b49 solid 2px;
+  color: #0f2b49; 
+  font-weight: bold;
+}
+/* ファーストビューすぎたボタンの色変更↑*/
+
+
 .top-header__menu-button01 {
   display: flex;
   justify-content: center;
@@ -106,28 +155,6 @@ img {
   background-color: #fff;
   border: #dba11c solid 2px;
   color: #dba11c; 
-  font-weight: bold;
-}
-
-.top-header__menu-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 210px;
-  height: 50px;
-  margin: 0 auto;
-  border: none;
-  border-radius: 5px;
-  background-color: #0f2b49;
-  color: #fff;
-  font-weight: 400;
-  font-size: 1em;
-}
-
-.top-header__menu-button:hover {
-  background-color: #fff;
-  border: #0f2b49 solid 2px;
-  color: #0f2b49; 
   font-weight: bold;
 }
 /* ↑デモ01用↑ */

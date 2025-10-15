@@ -81,7 +81,31 @@ img {
   gap: 10px;
 }
 
+/* ファーストビューだけボタンの色変更↓ */
 .top-header__menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 50px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #207ACE;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.top-header__menu-button:hover {
+  background-color: #207ACE;
+  color: #fff; 
+  cursor: pointer;  
+}
+/* ファーストビューだけボタンの色変更↑*/
+
+/* ファーストビューすぎたボタンの色変更↓ */
+.top-header.scrolled .top-header__menu-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,11 +120,13 @@ img {
   font-size: 1em;
 }
 
-.top-header__menu-button:hover {
+.top-header.scrolled .top-header__menu-button:hover {
   background-color: #5b8ed7;
   color: #fff; 
   cursor: pointer;  
 }
+
+/* ファーストビューすぎたボタンの色変更↑*/
 
 .top-header__square-btn a {
   display: flex;
@@ -115,7 +141,7 @@ img {
 }
 
 .top-header__square-btn a:hover {
-  background-color: #a68d65;  
+  background-color: #e5bd60;  
 }
 
 .top-header__square-button {
@@ -130,6 +156,15 @@ img {
 .top-header__square-free {
   width: 95px;
   color: #dba11c;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 0.875rem;
+  padding: 0 20px;
+}
+
+.top-header__square-free a:hover {
+  width: 95px;
+  color: #e5bd60;
   background-color: #fff;
   font-weight: bold;
   font-size: 0.875rem;

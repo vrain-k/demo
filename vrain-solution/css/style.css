@@ -174,6 +174,19 @@ img {
   overflow: hidden;
 }
 
+/* サイドメニュー hoverで li 横幅拡張 */
+.side-menu:hover .menu-item {
+  width: 180px;
+}
+
+/* サイドメニュー hoverでラベル表示 */
+.side-menu:hover .menu-item .label {
+  opacity: 1;
+  transform: translateX(20px);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
 /* li 初期状態 */
 .menu-item {
   display: flex;
@@ -196,11 +209,6 @@ img {
   background: #F1F1F1;
 }
 
-/* サイドメニュー hoverで li 横幅拡張 */
-.side-menu:hover .menu-item {
-  width: 180px;
-}
-
 /* アイコン */
 .menu-item .icon img {
   display: block;
@@ -219,11 +227,91 @@ img {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* サイドメニュー hoverでラベル表示 */
-.side-menu:hover .menu-item .label {
-  opacity: 1;
-  transform: translateX(0);
-  margin-left: 20px;
+/* ================= スマホ版 ================= */
+@media (max-width: 768px) {
+/* サイドメニュー全体 */
+  .side-menu {
+    top: auto;           /* 縦中央解除 */
+    bottom: 0;        /* ページ下固定 */
+    right: 0;         /* 少し内側に寄せる */
+    transform: none;
+/*    display: flex;*/
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: visible;
+  }
+  
+  .side-menu ul {
+    display: flex;
+    flex-direction: row;  /* 横方向に並べる */
+    position: relative;
+    bottom: auto;
+    right: auto;
+    transform: none;
+    opacity: 1;           /* 常に表示 */
+    pointer-events: auto;
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  /* サイドメニュー hoverで li 横幅拡張 */
+  .side-menu .menu-item {
+    width: 25%;
+  }
+
+  /* サイドメニュー hoverでラベル表示 */
+  .side-menu:hover .menu-item .label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* li 初期状態 */
+  .menu-item {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .menu-item_line {
+    border-right: 1px solid #ccc;
+    border-bottom: none;
+  }
+  
+  .side-menu li:last-child {
+    border-right: none;
+  }
+  /* li hover背景色 */
+  .menu-item:hover {
+    background: #F1F1F1;
+  }
+
+  /* アイコン */
+  .menu-item .icon img {
+    display: block;
+  /*  margin: 0 10px;*/
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .menu-item .label {
+    opacity: 1;
+    transform: translateX(0);
+    font-size: 0.625rem;
+  } 
+
+  /* hover の効果は無効化 */
+  .side-menu:hover .menu-item {
+    display: none;
+  }  
+  
 }
 
 /* ページ下部CTA */
@@ -326,4 +414,118 @@ img {
   color: #0C2B4A;
   font-weight: bold;
   white-space: nowrap;
+}
+
+/* ================= スマホ版 ================= */
+@media (max-width: 768px) {
+  /* ページ下部CTA */
+  .page__cta-container {
+    width: 100%;
+    background-color: #0C2B4A;
+    color: #fff;
+    padding: 80px 0;
+  }
+
+  .page__cta-box {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .page__cta-box h3 {
+    text-align: center;
+  }
+
+  .page__cta-box hr {
+    width: 90%;
+    border: solid 1px #fff;
+    margin: 25px auto;
+  }
+
+  .page__cta-box p {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .page__cta-list {
+    width: 80%;
+    margin: 40px auto 0 auto;
+  }
+
+  .page__cta-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .page__cta-list li {
+    list-style-type: none;
+  }
+
+  .page__cta-libox {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
+  .page__cta-libox:hover {
+    background-color: #f4f9ff;
+    cursor: pointer;
+  }
+
+  .page__cta-libox::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55px;
+    height: 55px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .page__cta-libox.icon-type1::after {
+    background-image: url("../img/icon-contact.png");
+  }
+
+  .page__cta-libox.icon-type2::after {
+    background-image: url("../img/icon-download.png");
+  }
+
+  .page__cta-libox.icon-type3::after {
+    background-image: url("../img/icon-freetest.png");
+  }
+
+  .page__cta-libox::before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 20px;
+    background-image: url("../img/icon-right_arrow.png");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 28px;
+    display: block;
+  }
+
+  .page__cta-libox span {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #0C2B4A;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+
+/* ↓ここは最後消す */
+@media (max-width: 768px) {
+  .top-header {
+    display: none;
+  }
 }

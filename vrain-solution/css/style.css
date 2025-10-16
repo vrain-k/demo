@@ -275,7 +275,8 @@ img {
   .menu-item {
     display: block;
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px 0px;
+    text-align: center;
   }
 
   .menu-item_line {
@@ -535,3 +536,4 @@ img {
     display: none;
   }
 }
+

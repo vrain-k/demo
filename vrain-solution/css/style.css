@@ -309,7 +309,13 @@ img {
 
   /* hover の効果は無効化 */
   .side-menu:hover .menu-item {
-    display: none;
+    display: block;
+  } 
+  a[href^="tel:"] {
+      pointer-events: none;
+      cursor: default;
+      color: #03122D !important;
+      text-decoration: none !important;
   }  
   
 }

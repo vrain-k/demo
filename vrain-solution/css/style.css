@@ -226,6 +226,12 @@ img {
   white-space: nowrap;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+a[href^="tel:"] {
+    pointer-events: none;
+    cursor: default;
+    color: #03122D !important;
+    text-decoration: none !important;
+} 
 
 /* ================= スマホ版 ================= */
 @media (max-width: 768px) {
@@ -314,12 +320,10 @@ img {
     display: block;
   } 
   a[href^="tel:"] {
-      pointer-events: none;
       cursor: default;
       color: #03122D !important;
       text-decoration: none !important;
   }  
-  
 }
 
 /* ページ下部CTA */
@@ -537,5 +541,3 @@ img {
     display: none;
   }
 }
-
-

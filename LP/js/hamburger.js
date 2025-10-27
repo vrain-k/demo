@@ -29,3 +29,23 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', () => {
   if (menuCheckbox.checked) closeMenu();
 });
+
+// スマホ用固定メニューがフッター付近で消える
+document.addEventListener("DOMContentLoaded", function () {
+  const bottomMenu = document.querySelector(".bottom-menu");
+  const footer = document.querySelector("footer");
+
+  function checkFooterVisibility() {
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // フッターが画面内に見え始めたらメニューを非表示
+    if (footerRect.top < windowHeight) {
+      bottomMenu.classList.add("hide");
+    } else {
+      bottomMenu.classList.remove("hide");
+    }
+  }
+
+  window.addEventListener("scroll", checkFooterVisibility);
+});

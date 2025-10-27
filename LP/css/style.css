@@ -2190,24 +2190,24 @@ footer img {
 
 @media (max-width: 768px) {
 /* 下部固定メニュー（スマホ専用） */
-.bottom-menu {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 75px;
-  display: flex;
-  justify-content: space-around;
-  background-color: #0E2B49;
-  z-index: 1000;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
+  .bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #0E2B49;
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
 /* フッター付近で消える */
   .bottom-menu.hide {
     transform: translateY(100%);
     opacity: 0;
-  }   
+  }  
 
 /* 各メニュー項目 */
   .cmb__n-f {

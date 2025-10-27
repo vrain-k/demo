@@ -1891,14 +1891,14 @@ header {
 
   /* 各ステップの色（グラデーションでもOK） */
   .step1 {
-    width: auto;
+    width: 48px;
     height: 250px;
     background-color: #0f2e50;
     padding: 20px 10px;
   }
 
   .step2 {
-    width: auto;
+    width: 48px;
     height: 250px;
     background-color: #1e73be;
     margin-left: 0; /* 重なり感を出す */
@@ -1906,7 +1906,7 @@ header {
   }
 
   .step3 {
-    width: auto;
+    width: 48px;
     height: 250px;
     background-color: #4aa3ff;
     margin-left: 0;

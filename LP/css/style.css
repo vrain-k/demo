@@ -125,8 +125,32 @@ header {
   color: #333;
 }
 
+
+.header__nav a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s; 
+}
+
+.header__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* テキストの少し下に配置 */
+  width: 0;
+  height: 2px;
+  background: #0E2B49;
+  transition: width 0.3s ease;  
+}
+
 .header__nav a:hover {
   color: #0E2B49;
+}
+
+.header__nav a:hover::after {
+  width: 100%;
 }
 
 .nav__button {

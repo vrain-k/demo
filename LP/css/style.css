@@ -2201,10 +2201,10 @@ footer img {
   background-color: #007bff;
   z-index: 1000;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* 各メニュー項目 */
-
   .cmb__n-f {
     display: block;
     justify-content: space-around;

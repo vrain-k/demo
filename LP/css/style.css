@@ -2198,7 +2198,7 @@ footer img {
   height: 75px;
   display: flex;
   justify-content: space-around;
-  background-color: #007bff;
+  background-color: #0E2B49;
   z-index: 1000;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease, opacity 0.3s ease;

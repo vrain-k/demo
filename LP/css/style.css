@@ -2175,11 +2175,11 @@ footer img {
   }
 
   footer img {
-    height: 50px;
+    height: 40px;
   }
 
   .footer-box p {
-    padding-right: 30px;
+    padding-right: 0;
   }
   .copyright {
     text-align: center;

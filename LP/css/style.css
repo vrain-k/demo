@@ -2188,6 +2188,10 @@ footer img {
   }  
 }
 
+.bottom-menu {
+  display: none;
+}
+
 @media (max-width: 768px) {
 /* 下部固定メニュー（スマホ専用） */
   .bottom-menu {

@@ -49,3 +49,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", checkFooterVisibility);
 });
+
+// 離脱防止アラート
+let isFormChanged = false;
+
+// 対象となるフォーム要素を指定（複数フォームがある場合にも対応）
+const forms = document.querySelectorAll("form");
+
+// 入力や変更があったらフラグをON
+document.addEventListener("input", function (e) {
+  if (e.target.closest("form")) {
+    isFormChanged = true;
+  }
+});
+
+// フォームが送信された場合は警告をOFF（送信後は離脱警告を出さない）
+forms.forEach((form) => {
+  form.addEventListener("submit", function () {
+    isFormChanged = false;
+  });
+});
+
+// ページ離脱時に警告を表示
+window.addEventListener("beforeunload", function (event) {
+  if (isFormChanged) {
+    event.preventDefault();
+    event.returnValue = ""; // この設定でブラウザ標準の離脱確認が出る
+  }
+});

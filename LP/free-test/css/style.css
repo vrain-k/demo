@@ -38,6 +38,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  opacity: 0.9;
+}
+
 h1,
 h2,
 h3,
@@ -170,7 +174,7 @@ header {
   background-color: #FFC318;
   color: #fff;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1rem;
   cursor: pointer;  
 }
 
@@ -186,7 +190,7 @@ header {
   background-color: #00C473;
   color: #fff;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1rem;
   cursor: pointer;  
 }
 
@@ -250,7 +254,7 @@ header {
     background-color: #0E2B49;
     color: #fff;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1rem;
     cursor: pointer;
   }
 
@@ -265,7 +269,7 @@ header {
     background-color: #FDF411;
     color: #0E2B49;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1rem;
     cursor: pointer;  
   }
 /* Hamburger-menu */
@@ -282,7 +286,7 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 90;
-    background-color: #0E2B49;
+    background-color: #00C473;
     border: 1px solid #fff;
   }
   .menu-btn span,
@@ -323,7 +327,7 @@ header {
     top: 0;
     left: 100%;
     z-index: 80;
-    background-color: #0E2B49;
+    background-color: #00C473;
     transition: all 0.5s;
   }
   .menu-content ul {
@@ -416,7 +420,7 @@ header {
   background-color: #FFC318;
   color: #fff;
   font-weight: bold;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   cursor: pointer;  
 }
 
@@ -432,18 +436,18 @@ header {
   background-color: #fff;
   color: #00C473;
   font-weight: bold;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   cursor: pointer;  
 }
 
 .pagetop {
   height: 50px;
   width: 50px;
+  border: 3px solid #fff;
   position: fixed;
   right: 30px;
   bottom: 30px;
-  background: #fff;
-  border: solid 1px #0E2B49;
+  background: #00C473;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -453,8 +457,8 @@ header {
 .pagetop__arrow {
   height: 10px;
   width: 10px;
-  border-top: 3px solid #0E2B49;
-  border-right: 3px solid #0E2B49;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
   transform: translateY(20%) rotate(-45deg);
 }
 
@@ -462,34 +466,258 @@ header {
   display: none;
 }
 
-
 @media (max-width: 768px) {
 /*
   common
 ---------------------------------------------- */
+  .cta__belt {
+    width: 100%;
+    background-color: #00C473;
+    padding: 32.5px 0;
+  }
+
+  .cta__button {
+    width: 80%;
+    margin: 0 auto;  
+    display: block;
+    justify-content: center;
+    align-items: center;  
+/*    gap: 15px;*/
+  }
+
+  .cmb__y {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto 20px auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFC318;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.125rem;
+    cursor: pointer;  
+  }
+
+  .cmb__g {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #00C473;
+    font-weight: bold;
+    font-size: 1.125rem;
+    cursor: pointer;  
+  }
+
   .pagetop {
-      height: 50px;
-      width: 50px;
-      position: fixed;
-      right: 30px;
-      bottom: 100px;
-      background: #fff;
-      border: solid 1px #0E2B49;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 2;
+    height: 50px;
+    width: 50px;
+    border: 3px solid #fff;
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    background: #00C473;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
   }
 
   .pagetop__arrow {
-      height: 10px;
-      width: 10px;
-      border-top: 3px solid #0E2B49;
-      border-right: 3px solid #0E2B49;
-      transform: translateY(20%) rotate(-45deg);
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: translateY(20%) rotate(-45deg);
   }
+
   .sp-only {
     display: block;
+  }
+}
+
+/*
+  TOP
+---------------------------------------------- */
+.fv__contents-box {
+  position: relative;
+  background-image: url("../img/fv-img01_02.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;    
+}
+
+.fv__contents-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 43, 73, 0.2);
+}
+
+.fv__contents {
+  display: flex;
+  height: 100vh;
+  width: 100vw;  
+  margin-top: -90px;
+}
+
+.fv__text {
+  width: 50%;
+  padding: 20px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+/*  align-items: center;*/
+}
+
+.fv__text h1 {
+  position: relative;
+  font-size: 2.5rem;
+  color: #00C473;
+  margin-top: 15%;
+  z-index: 2;
+}
+
+.fv__text h1 span {
+  background-color: #fff;
+  padding: 10px;
+  line-height: 2.2;
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.45);  
+}
+
+.fv__text h2 {
+  position: relative;
+  font-size: 1.25rem;
+  margin-top: 20px;  
+  color: #fff;
+  z-index: 2;
+}
+
+.fv__text p {
+  position: relative;
+  max-width: 550px;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.fv__img {
+  width: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.fv__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom-left-radius: 20px;
+}
+
+@media (max-width: 768px) {
+/*
+  TOP
+---------------------------------------------- */
+  .fv__contents-box {
+    position: relative;
+    background-image: url("../img/fv-img01_02.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;    
+  }
+  
+  .fv__contents-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 43, 73, 0.2);
+  }
+
+  .fv__contents {
+    display: block;
+    height: 100vh;
+    width: 100vw;  
+    margin-top: 0;
+  }
+
+  .fv__text {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+/*    flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+  }
+
+  .fv__text h1 {
+    position: relative;
+    font-size: 1.75rem;
+    color: #00C473;
+    margin-top: 0;
+    padding-top: 30px;
+    z-index: 2;
+  }
+
+  .fv__text h1 span {
+    background-color: #fff;
+    padding: 10px;
+    line-height: 2.5;
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.45); 
+  }
+
+  .fv__text h2 {
+    position: relative;
+    font-size: 1.25rem;
+    margin-top: 10px;  
+    color: #fff;
+    z-index: 2;
+  }
+
+  .fv__text p {
+    position: relative;
+    max-width: 550px;
+    margin-top: 15px;
+    color: #fff;
+    font-weight: 700;
+    text-align: justify;
+    z-index: 2;
+  }
+
+  .fv__img {
+    width: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  .fv__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
   }
 }
 /*
@@ -660,7 +888,7 @@ header {
 }
 
 /* ==============================
-   人アイコンA（右側）
+   人アイコンC（右側）
 ============================== */
 .anxiety__contents-c {
   flex-direction: row-reverse;
@@ -713,17 +941,21 @@ header {
   border: 5px solid #00C473;
   border-radius: 20px;
   padding: 30px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .worktest-illust {
   position: absolute;
-  top: -160px; /* ボックスの上に乗せる高さ調整 */
+  top: -138px; /* ボックスの上に乗せる高さ調整 */
   left: 50%;
   transform: translateX(-50%);
-  width: 1100px; /* イラストサイズ調整 */
+  width: 950px; /* イラストサイズ調整 */
   height: auto;
+}
+
+.worktest-illust_sp {
+  display: none;
 }
 
 .worktest-box p {
@@ -732,6 +964,258 @@ header {
   line-height: 1.5;
   margin: 0;
   text-align: justify;
+}
+
+@media (max-width: 768px) {
+/*
+  BODY
+---------------------------------------------- */
+/* お悩みありませんか？ */
+  .anxiety {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  .anxiety__contents-box {
+    background-color: #e5f9f1;
+    padding-top: 60px;
+  }
+
+  .anxiety__contents-box::after {
+    content: "";
+    position: absolute;
+    bottom: 80;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;  /* 幅の半分 */
+    border-right: 40px solid transparent;
+    border-top: 50px solid #e5f9f1; /* 三角の高さと色を調整 */
+  }
+
+  .anxiety__contents {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 60px;
+  }
+
+  .anxiety__contents h2 {
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .anxiety__contents h2 span {
+    background: linear-gradient(transparent 70%, #FDF411 50%);  
+    padding: 0 20px;
+  }
+
+  .anxiety__contents h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .anxiety__contents h3 span {
+    background: linear-gradient(transparent 70%, #FDF411 50%);  
+  }
+
+  /* ==============================
+     共通スタイル
+  ============================== */
+  .anxiety__contents-a,
+  .anxiety__contents-b, 
+  .anxiety__contents-c {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  /*  margin-bottom: 40px;*/
+  }
+
+  .anxiety__contents-a ul,
+  .anxiety__contents-b ul,
+  .anxiety__contents-c ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .anxiety__contents-a li,
+  .anxiety__contents-b li,
+  .anxiety__contents-c li {
+    position: relative;
+    width: 100%;
+    min-height: 70px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #00C473;
+    margin-bottom: 20px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 10px;
+  }
+
+  /* チェックアイコン */
+  .anxiety__contents-a span::before,
+  .anxiety__contents-b span::before,
+  .anxiety__contents-c span::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/worries__check.png");
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  /* ==============================
+     人アイコンA（右側）
+  ============================== */
+  .anxiety__contents-a {
+    flex-direction: row-reverse;
+  }
+
+  .anxiety__contents-a::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/anxiety-a.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-top: 0;  
+  }
+
+  /* 吹き出しの三角形（左→右向き） */
+  .anxiety__contents-a li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    border-left: 20px solid #00C473;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  /* ==============================
+     人アイコンB（左側）
+  ============================== */
+  .anxiety__contents-b {
+    flex-direction: row;    
+  }  
+  
+  .anxiety__contents-b::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/anxiety-b.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  /* 吹き出しの三角形（右→左向き） */
+  .anxiety__contents-b li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    border-right: 20px solid #00C473;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  /* ==============================
+     人アイコンC（右側）
+  ============================== */
+  .anxiety__contents-c {
+    flex-direction: row-reverse;
+  }
+
+  .anxiety__contents-c::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/anxiety-c.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-top: 0;
+  }
+
+  /* 吹き出しの三角形（左→右向き） */
+  .anxiety__contents-c li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    border-left: 20px solid #00C473;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  /* 不安解消 */
+  .resolved__contents {
+    background-color: #fff;
+    padding: 80px 0 60px 0;
+  }
+
+  .resolved__contents h2 {
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 110px;
+  }
+
+  .resolved__contents h2 span {
+    background: linear-gradient(transparent 70%, #FDF411 50%);  
+  }
+
+  .worktest-box {
+    position: relative;
+    background: #fff;
+    border: 5px solid #00C473;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .worktest-illust {
+    display: none;
+  }
+  
+  .worktest-illust_sp {
+    display: block;
+    position: absolute;
+    top: -115px; /* ボックスの上に乗せる高さ調整 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* イラストサイズ調整 */
+    height: auto;    
+  }
+
+  .worktest-box p {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+  }
 }
 
 /* 検証テストの流れ */
@@ -792,12 +1276,12 @@ header {
   display: block;
   width: 15px;
   height: 30px;
-  background-image: url("../img/arrow-testflow.png");
+  background-image: url("../img/arrow-right.png");
   background-size: contain;
   background-repeat: no-repeat;    
 }
 
-.testflow__list ul li:last-child::after{
+.testflow__listbox ul li:last-child::after{
   content: none;
 }
 
@@ -833,6 +1317,112 @@ header {
   margin: 0 auto 30px auto;
 }
 
+@media (max-width: 768px) {
+/* 検証テストの流れ */
+  .testflow__contents-box {
+    background-color: #e5f9f1;
+    padding: 40px;  
+  }
+
+  .testflow__contents {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 10%);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .testflow__contents h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .testflow__contents h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 6px;
+    margin: 15px auto 0 auto;
+    background-image: url("../img/icon-title.png");
+    background-size: contain;
+    background-repeat: no-repeat;  
+  }
+
+  .testflow__contents p {
+    text-align: justify;
+  }
+
+  .testflow__listbox ul {
+    position: relative;
+    display: block;
+    margin-top: 80px;
+    gap: 0;
+  }
+
+  .testflow__listbox ul li {
+    position: relative;
+    list-style: none;
+    background-color: #F6F6F6;
+    width: 100%;
+    margin-bottom: 90px;
+  }
+
+  .testflow__listbox ul li::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 105%;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 15px;
+    background-image: url("../img/arrow-bottom.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .testflow__listbox ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  .testflow__listbox h3 {
+    position: relative;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: #00C473;
+    padding-top: 30px;
+    z-index: 999;
+  }
+
+  .flownum__img {
+    position: absolute;
+    top: -40px;
+    left: 30%;
+    width: 80px;
+    height: 80px;
+  }
+
+  .testflow__img {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+  }
+
+  .testflow__listbox p {
+    width: 165px;
+    font-size: 0.875rem;
+    text-align: justify;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+}
+
 /* 提供だけではありません */
 .offer__contents-box {
   padding: 120px 0;
@@ -866,6 +1456,486 @@ header {
   margin-bottom: 15px;
 }
 
+.offer__flow-box {
+  border: 5px solid #00C473;
+  margin-top: 60px;
+  padding: 60px;
+}
+
+.offer__flow-box ul {
+  position: relative;
+  display: flex;
+  padding-top: 80px;
+}
+
+.offer__flow-box ul li {
+  position: relative;
+  list-style: none;
+  width: 216px;
+}
+
+.offer__balloon {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  border-bottom: solid 3px #00C473;
+  padding: 12px 16px;
+  min-width: 240px;
+  max-width: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); 
+/*  text-align: center;  */
+}
+
+.offer__balloon:before,
+.offer__balloon:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);  
+}
+
+.offer__balloon:before {
+  border: solid 12px transparent;
+  border-top: solid 12px #00C473;  
+}
+
+.offer__balloon:after {
+  border: solid 14px transparent;
+  border-top: solid 14px #fff;
+  margin-top: -5px;  
+}
+
+.offer__flow-box h3 {
+  color: #00C473;
+  font-size: 1.5rem;
+}
+
+.offer__img {
+  position: absolute;
+  top: -50px;
+  left: 30%;
+  width: 100px;
+  height: 100px;
+}
+
+.offer__list-01 {
+  position: relative;
+  display: inline-block;
+  max-height: 216px;
+  background: #00C473;
+  color: #fff;
+  padding: 50px 20px 5px 20px;
+}
+
+.offer__list-01::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #00C473;
+  z-index: 999;
+}
+
+.offer__list-01 h4 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 10px;
+  height: 60px;
+  line-height: 3;
+}
+
+.offer__list-01 p {
+  text-align: justify;
+  font-size: 0.9375rem;
+  margin-top: 5px;
+}
+
+.offer__list-02 {
+  max-height: 216px;
+  background: #26CD88;
+  color: #fff;
+  padding: 50px 20px 5px 20px;
+}
+
+.offer__list-02::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #26CD88;
+  z-index: 999;
+}
+
+.offer__list-02 h4 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 10px;
+  height: 60px;
+}
+
+.offer__list-02 p {
+  text-align: justify;
+  font-size: 0.9375rem;
+  margin-top: 5px;
+}
+
+.offer__list-03 {
+  max-height: 216px;
+  background: #59D9A4;
+  color: #fff;
+  padding: 50px 20px 5px 20px;
+}
+
+.offer__list-03::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #59D9A4;
+  z-index: 999;
+}
+
+
+.offer__list-03 h4 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 10px;
+  height: 60px;
+}
+
+.offer__list-03 p {
+  text-align: justify;
+  font-size: 0.9375rem;
+  margin-top: 5px;
+}
+
+.offer__list-04 {
+  max-height: 216px;
+  background: #8CE4C0;
+  color: #fff;
+  padding: 50px 20px 5px 20px;
+}
+
+.offer__list-04::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #8CE4C0;
+  z-index: 999;
+}
+
+.offer__list-04 h4 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 10px;
+  height: 60px;
+  line-height: 3;  
+}
+
+.offer__list-04 p {
+  text-align: justify;
+  font-size: 0.9375rem;
+  margin-top: 5px;
+}
+
+.offer__list-05 {
+  max-height: 216px;
+  background: #A6EACE;
+  color: #fff;
+  padding: 50px 20px 5px 20px;
+}
+
+.offer__list-05 h4 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 10px;
+  height: 60px;
+  line-height: 3;  
+}
+
+.offer__list-05 p {
+  text-align: justify;
+  font-size: 0.9375rem;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+/* 提供だけではありません */
+  .offer__contents-box {
+    padding: 60px 0;
+  }
+
+  .offer__contents {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .offer__contents h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .offer__contents h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 6px;
+    margin: 15px auto 0 auto;
+    background-image: url("../img/icon-title.png");
+    background-size: contain;
+    background-repeat: no-repeat;  
+  }
+
+  .offer__contents p {
+    text-align: justify;
+    margin-bottom: 0;
+  }
+
+  .offer__flow-box {
+    border: 5px solid #00C473;
+    margin-top: 40px;
+    padding: 30px;
+  }
+
+  .offer__flow-box ul {
+    position: relative;
+    display: block;
+    padding-top: 40px;
+  }
+
+  .offer__flow-box ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+  }
+
+  .offer__balloon {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    border-bottom: solid 3px #00C473;
+    padding: 12px 16px;
+    min-width: 240px;
+    max-width: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); 
+  /*  text-align: center;  */
+  }
+
+  .offer__balloon:before,
+  .offer__balloon:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);  
+  }
+
+  .offer__balloon:before {
+    border: solid 12px transparent;
+    border-top: solid 12px #00C473;  
+  }
+
+  .offer__balloon:after {
+    border: solid 14px transparent;
+    border-top: solid 14px #fff;
+    margin-top: -5px;  
+  }
+
+  .offer__flow-box h3 {
+    color: #00C473;
+    font-size: 1.25rem;
+  }
+
+  .offer__img {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+  }
+
+  .offer__list-01 {
+    position: relative;
+    display: inline-block;
+    min-height: auto;
+    background: #00C473;
+    color: #fff;
+    padding: 20px;
+  }
+
+  .offer__list-01::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    border: 15px solid transparent;
+    border-top: 15px solid #00C473;
+    z-index: 999;
+  }
+
+  .offer__list-01 h4 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 80px;
+    height: auto;
+    line-height: 2;
+  }
+
+  .offer__list-01 p {
+    text-align: justify;
+    font-size: 0.9375rem;
+    margin-top: 5px;
+  }
+
+  .offer__list-02 {
+    max-height: 100%;
+    background: #26CD88;
+    color: #fff;
+    padding: 50px 20px 20px 20px;
+  }
+
+  .offer__list-02::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    border: 15px solid transparent;
+    border-top: 15px solid #26CD88;
+    z-index: 999;
+  }
+
+  .offer__list-02 h4 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 55px;
+    height: auto;
+  }
+
+  .offer__list-02 p {
+    text-align: justify;
+    font-size: 0.9375rem;
+    margin-top: 5px;
+  }
+
+  .offer__list-03 {
+    max-height: 100%;
+    background: #59D9A4;
+    color: #fff;
+    padding: 50px 20px 20px 20px;
+  }
+
+  .offer__list-03::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    border: 15px solid transparent;
+    border-top: 15px solid #59D9A4;
+    z-index: 999;
+  }
+
+  .offer__list-03 h4 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 55px;
+    height: auto;
+  }
+
+  .offer__list-03 p {
+    text-align: justify;
+    font-size: 0.9375rem;
+    margin-top: 5px;
+  }
+
+  .offer__list-04 {
+    max-height: 100%;
+    background: #8CE4C0;
+    color: #fff;
+    padding: 50px 20px 20px 20px;
+  }
+
+  .offer__list-04::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    border: 15px solid transparent;
+    border-top: 15px solid #8CE4C0;
+    z-index: 999;
+  }
+
+  .offer__list-04 h4 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 55px;
+    height: auto;
+    line-height: 2;  
+  }
+
+  .offer__list-04 p {
+    text-align: justify;
+    font-size: 0.9375rem;
+    margin-top: 5px;
+  }
+
+  .offer__list-05 {
+    max-height: 100%;
+    background: #A6EACE;
+    color: #fff;
+    padding: 50px 20px 20px 20px;
+  }
+
+  .offer__list-05 h4 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 55px;
+    height: auto;
+    line-height: 2;  
+  }
+
+  .offer__list-05 p {
+    text-align: justify;
+    font-size: 0.9375rem;
+    margin-top: 5px;
+  }
+}
 
 @media (max-width: 768px) {
 /* ファーストビュー */
@@ -883,9 +1953,21 @@ header {
 }
 
 .contact__title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 900;
-  text-align: center;  
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 6px;
+    margin: 15px auto 0 auto;
+    background-image: url(../img/icon-title.png);
+    background-size: contain;
+    background-repeat: no-repeat;  
 }
 
 .contact__base-box {
@@ -958,11 +2040,36 @@ textarea {
   text-decoration: underline;
 }
 
+.form__button {
+  width: 290px;
+  margin: 0 auto;  
+  padding-top: 40px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.fmb__g {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  height: 75px;
+  margin: 0 auto;
+  border: none;
+  background-color: #00C473;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.25rem;
+  cursor: pointer;  
+}
+
 @media (max-width: 768px) {
 /* お問い合わせ */
   .contact__contents-box {
     background-color: #F3F5F9;  
-    padding: 120px 0;
+    padding: 60px 0;
   }
 
   .contact__contents {
@@ -974,14 +2081,14 @@ textarea {
     font-size: 2rem;
     font-weight: 900;
     text-align: center;  
-    margin-top: 60px;
+    margin-top: 0;
   }
 
   .contact__base-box {
     width: 100%;
     padding: 40px 20px 0 20px;
     background-color: #fff;
-    margin-top: 60px;
+    margin-top: 0;
   }
 
   .form-box label {
@@ -1046,6 +2153,31 @@ textarea {
     color: #1e73be;
     text-decoration: underline;
   }
+  
+  .form__button {
+    width: 100%;
+    margin: 0 auto;  
+    padding-top: 20px;
+    padding-bottom: 60px;
+    display: block;
+    justify-content: center;
+    align-items: center;  
+  }
+
+  .fmb__g {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    border: none;
+    background-color: #00C473;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.125rem;
+    cursor: pointer;  
+  }  
 }
 
 /*
@@ -1053,7 +2185,7 @@ textarea {
 ---------------------------------------------- */
 footer {
   height: 100px;
-  background-color: #0E2B49;
+  background-color: #00C473;
   padding-top: 20px;
   padding-left: 30px;
   color: #fff;
@@ -1083,7 +2215,7 @@ footer img {
 ---------------------------------------------- */
   footer {
     height: auto;
-    background-color: #0E2B49;
+    background-color: #00C473;
     padding: 20px;
     color: #fff;
   }
@@ -1120,7 +2252,7 @@ footer img {
     height: 75px;
     display: flex;
     justify-content: space-around;
-    background-color: #0E2B49;
+    background-color: #FFC318;
     z-index: 1000;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -1132,7 +2264,7 @@ footer img {
   }  
 
 /* 各メニュー項目 */
-  .cmb__n-f {
+  .fmb__y-f {
     display: block;
     justify-content: space-around;
     align-items: center;
@@ -1140,27 +2272,11 @@ footer img {
     height: 75px;
     margin: 0 auto 20px auto;
     border: none;
-    background-color: #0E2B49;
+    background-color: #FFC318;
     color: #fff;
     font-weight: bold;
-    font-size: 1.125em;
+    font-size: 1.25rem;
     text-align: center;
-    padding-top: 25px;
-  }
-
-  .cmb__y-f {
-    display: block;
-    justify-content: space-around;
-    align-items: center;
-    width: 95%;
-    height: 75px;
-    margin: 0 auto;
-    border: none;
-    background-color: #FDF411;
-    color: #0E2B49;
-    font-weight: bold;
-    font-size: 1.125em;
-    text-align: center;
-    padding-top: 25px;
+    padding-top: 20px;
   }
 }

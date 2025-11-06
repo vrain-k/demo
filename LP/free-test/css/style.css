@@ -549,7 +549,7 @@ header {
 ---------------------------------------------- */
 .fv__contents-box {
   position: relative;
-  background-image: url("../img/fv-img01_02.jpg");
+  background-image: url("https://vrain-k.github.io/demo/LP/free-test/img/fv-img01_02.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -636,7 +636,7 @@ header {
 ---------------------------------------------- */
   .fv__contents-box {
     position: relative;
-    background-image: url("../img/fv-img01_02.jpg");
+    background-image: url("https://vrain-k.github.io/demo/LP/free-test/img/fv-img01_02.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

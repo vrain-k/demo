@@ -574,6 +574,7 @@ a[href^="tel:"] {
   position: absolute;
   top: -12px;
   right: -12px;
+	color: #0E2B49;	
   background: #fff;
   border: none;
   border-radius: 50%;
@@ -623,6 +624,7 @@ a[href^="tel:"] {
     position: absolute;
     top: -10px;
     right: -10px;
+	color: #0E2B49;  
     background: #fff;
     border: none;
     border-radius: 50%; /* ← 丸ボタンを維持 */
@@ -634,4 +636,5 @@ a[href^="tel:"] {
     box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* 立体感UP（任意） */
   }
 }
+
 

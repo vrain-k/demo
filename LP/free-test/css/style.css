@@ -549,7 +549,7 @@ header {
 ---------------------------------------------- */
 .fv__contents-box {
   position: relative;
-  background-image: url("https://vrain-k.github.io/demo/LP/free-test/img/fv-img01_02.jpg");
+  background-image: url("../img/fv-img01_02.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -636,12 +636,12 @@ header {
 ---------------------------------------------- */
   .fv__contents-box {
     position: relative;
-    background-image: url("https://vrain-k.github.io/demo/LP/free-test/img/fv-img01_02.jpg");
+    background-image: url("../img/fv-img01_02.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;    
   }
   
@@ -996,7 +996,7 @@ header {
 
   .anxiety__contents {
     position: relative;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     overflow: hidden;
     padding-bottom: 60px;
@@ -1006,7 +1006,7 @@ header {
     font-size: 1.75rem;
     font-weight: 900;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   .anxiety__contents h2 span {
@@ -1043,6 +1043,9 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: grid; /* 追加 */
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .anxiety__contents-a li,
@@ -1054,10 +1057,10 @@ header {
     border-radius: 8px;
     color: #fff;
     background-color: #00C473;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     font-size: 1.125rem;
     font-weight: 700;
-    padding: 10px;
+    padding: 10px 5px 10px 10px;
   }
 
   /* チェックアイコン */
@@ -1079,13 +1082,14 @@ header {
   ============================== */
   .anxiety__contents-a {
     flex-direction: row-reverse;
+    margin-bottom: 20px;
   }
 
   .anxiety__contents-a::before {
     content: "";
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     background-image: url("../img/anxiety-a.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -1109,14 +1113,15 @@ header {
      人アイコンB（左側）
   ============================== */
   .anxiety__contents-b {
-    flex-direction: row;    
+    flex-direction: row;  
+    margin-bottom: 20px;    
   }  
   
   .anxiety__contents-b::before {
     content: "";
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     background-image: url("../img/anxiety-b.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -1147,8 +1152,8 @@ header {
   .anxiety__contents-c::before {
     content: "";
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     background-image: url("../img/anxiety-c.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -1202,10 +1207,11 @@ header {
   .worktest-illust_sp {
     display: block;
     position: absolute;
-    top: -115px; /* ボックスの上に乗せる高さ調整 */
+    top: -110px; /* ボックスの上に乗せる高さ調整 */
     left: 50%;
     transform: translateX(-50%);
-    width: 100%; /* イラストサイズ調整 */
+    width: 100vw; /* イラストサイズ調整 */
+    max-width: 280px;
     height: auto;    
   }
 
@@ -1403,7 +1409,8 @@ header {
   .flownum__img {
     position: absolute;
     top: -40px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 80px;
     height: 80px;
   }

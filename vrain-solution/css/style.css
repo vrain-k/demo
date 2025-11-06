@@ -588,7 +588,7 @@ a[href^="tel:"] {
 /* === スマホ時：右下スライドイン（自然なアニメーション付き） === */
 @media (max-width: 767px) {
   .popup {
-    inset: auto 15px 15px auto;
+    inset: auto 15px 90px auto;
     width: auto;
     height: auto;
     background: transparent;
@@ -634,3 +634,4 @@ a[href^="tel:"] {
     box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* 立体感UP（任意） */
   }
 }
+

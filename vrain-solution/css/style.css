@@ -541,3 +541,96 @@ a[href^="tel:"] {
     display: none;
   }
 }
+
+
+/* ポップアップウインドウ表示 */
+/* === 共通 === */
+.popup {
+  position: fixed;
+  display: none;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup__content {
+  position: relative;
+  background: transparent;
+/*  border-radius: 12px;*/
+  overflow: visible;
+}
+
+.popup__image {
+  width: 400px;
+  max-width: 90vw;
+  border-radius: 0;
+  display: block;
+}
+
+/* 閉じるボタン */
+#popup-close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* 立体感UP（任意） */  
+}
+
+/* === スマホ時：右下スライドイン（自然なアニメーション付き） === */
+@media (max-width: 767px) {
+  .popup {
+    inset: auto 15px 15px auto;
+    width: auto;
+    height: auto;
+    background: transparent;
+    display: none;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .popup__image {
+    width: 200px; /* ← 少し小さめに調整 */
+    max-width: 80vw;
+    border-radius: 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, opacity 0.4s ease;
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  .popup.show .popup__image {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .popup__content {
+    position: relative;
+    background: transparent;
+    /* border-radius: 12px; ← 削除 */
+    overflow: visible; /* ← これが重要。ボタンがはみ出せるように */
+  }
+
+  #popup-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #fff;
+    border: none;
+    border-radius: 50%; /* ← 丸ボタンを維持 */
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 24px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* 立体感UP（任意） */
+  }
+}

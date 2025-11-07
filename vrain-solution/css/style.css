@@ -542,39 +542,57 @@ a[href^="tel:"] {
   }
 }
 
-
 /* ポップアップウインドウ表示 */
-/* === 共通 === */
-.popup {
+/* 共通：オーバーレイ＋フェード */
+#popup {
   position: fixed;
-  display: none;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  display: flex;               /* 常にレイアウト存在させる方法も有り（下で制御） */
   justify-content: center;
   align-items: center;
+  background: rgba(0,0,0,0.5);
   z-index: 9999;
+
+  opacity: 0;                  /* 初期は透明 */
+  pointer-events: none;        /* 非表示中はクリック無効 */
+  transition: opacity 0.6s ease;
 }
 
-.popup__content {
+/* 表示クラス */
+#popup.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ポップアップ本体 */
+#popup .popup__content {
   position: relative;
   background: transparent;
-/*  border-radius: 12px;*/
   overflow: visible;
+  transform: scale(0.96);
+  transition: transform 0.45s ease, opacity 0.45s ease;
+  opacity: 0;
 }
 
-.popup__image {
-  width: 400px;
+#popup.show .popup__content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* 画像 */
+#popup .popup__image {
+  width: 290px;
   max-width: 90vw;
   border-radius: 0;
   display: block;
 }
 
 /* 閉じるボタン */
-#popup-close {
+#popup #popup-close {
   position: absolute;
   top: -12px;
   right: -12px;
-	color: #0E2B49;	
+  color: #0E2B49;
   background: #fff;
   border: none;
   border-radius: 50%;
@@ -583,58 +601,43 @@ a[href^="tel:"] {
   cursor: pointer;
   font-size: 28px;
   line-height: 24px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* 立体感UP（任意） */  
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-/* === スマホ時：右下スライドイン（自然なアニメーション付き） === */
+/* スマホ：右下スライド＋フェード（override） */
 @media (max-width: 767px) {
-  .popup {
+  #popup {
     inset: auto 15px 90px auto;
-    width: auto;
-    height: auto;
     background: transparent;
-    display: none;
     justify-content: flex-end;
     align-items: flex-end;
+    /* スライド用 */
+    transform: translateY(40px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+    opacity: 0;
+    pointer-events: none;
   }
 
-  .popup__image {
-    width: 200px; /* ← 少し小さめに調整 */
+  #popup.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* スマホ用画像アニメ（補助） */
+  #popup .popup__image {
+    width: 200px;
     max-width: 80vw;
-    border-radius: 0;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-    transition: transform 0.5s ease, opacity 0.4s ease;
-    transform: translateY(40px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    transition: transform 0.45s ease, opacity 0.45s ease;
+    transform: translateY(16px);
     opacity: 0;
   }
-
-  .popup.show .popup__image {
+  #popup.show #popup__image {
     transform: translateY(0);
     opacity: 1;
   }
 
-  .popup__content {
-    position: relative;
-    background: transparent;
-    /* border-radius: 12px; ← 削除 */
-    overflow: visible; /* ← これが重要。ボタンがはみ出せるように */
-  }
-
-  #popup-close {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-	color: #0E2B49;  
-    background: #fff;
-    border: none;
-    border-radius: 50%; /* ← 丸ボタンを維持 */
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
-    font-size: 28px;
-    line-height: 24px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* 立体感UP（任意） */
-  }
+  /* close ボタン位置 tweak */
+  #popup #popup-close { top: -10px; right: -10px; width: 28px; height: 28px; }
 }
-
-

@@ -45,57 +45,81 @@ function closePopup() {
 
 // イベント登録（DOMContentLoaded 後に安全に行う）
 document.addEventListener('DOMContentLoaded', () => {
-  const popup = document.getElementById('popup');
-  const closeBtn = document.getElementById('popup-close');
-  const popupImg = document.querySelector('.popup__image'); // クラスで取得
-
-  // ページ識別キー（LPごとに変更）
-  const PAGE_KEY = 'lpai';
-  const STORAGE_KEY = `popupshown_${PAGE_KEY}`;
+  // ======== ページ別設定 ======== //
+  // --- LP-free 用 ---
+  const PAGE_KEY = 'lpai'; // ページ識別キー
   const IMAGES = [
     './img/popup-lpai_a.png',
     './img/popup-lpai_b.png',
     './img/popup-lpai_c.png'
   ];
 
-  // ローカルストレージ制御（1日3回）
+  // ======== 要素取得 ======== //
+  const popup = document.getElementById('popup');
+  const closeBtn = document.getElementById('popup-close');
+  const popupImg = document.querySelector('.popup__image');
+  if (!popup || !popupImg) return;
+
+  // ======== LocalStorage 設定 ======== //
+  const STORAGE_KEY = `popupshown_${PAGE_KEY}`;
   const today = new Date().toISOString().split('T')[0];
-  let popupData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || { date: today, count: 0, shownIndexes: [] };
-  if (popupData.date !== today) popupData = { date: today, count: 0, shownIndexes: [] };
+  let popupData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {
+    date: today,
+    count: 0,
+    shownIndexes: []
+  };
+
+  // 日付が変わったらリセット
+  if (popupData.date !== today) {
+    popupData = { date: today, count: 0, shownIndexes: [] };
+  }
+
+  // すでに3回表示済みなら終了
   if (popupData.count >= 3) return;
 
-  // --- ランダムで画像を選ぶ ---
+  // ======== 表示する画像を選択 ======== //
   let availableIndexes = IMAGES.map((_, i) => i).filter(i => !popupData.shownIndexes.includes(i));
   if (availableIndexes.length === 0) {
     availableIndexes = IMAGES.map((_, i) => i);
     popupData.shownIndexes = [];
   }
+
   const indexToShow = availableIndexes[Math.floor(Math.random() * availableIndexes.length)];
   popupImg.src = IMAGES[indexToShow];
 
-  // === 表示処理 ===
+  // ======== 表示処理 ======== //
   const showPopup = () => {
-    if (!popup.classList.contains('show')) {
-      popup.style.display = 'flex';
-      requestAnimationFrame(() => popup.classList.add('show'));
-    }
+    if (popup.classList.contains('show')) return;
+    popup.style.display = 'flex';
+    requestAnimationFrame(() => popup.classList.add('show'));
   };
 
-  // === 閉じる処理 ===
+  // ======== 閉じる処理 ======== //
   const closePopup = () => {
     popup.classList.remove('show');
-    popup.style.display = 'none';
+    popup.addEventListener('transitionend', () => {
+      popup.style.display = 'none';
+    }, { once: true });
+
+    // 表示履歴更新
     popupData.count++;
     popupData.shownIndexes.push(indexToShow);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(popupData));
   };
 
-  // イベント登録
+  // ======== イベント登録 ======== //
   if (closeBtn) closeBtn.addEventListener('click', closePopup);
-  popup.addEventListener('click', (e) => { if (e.target.id === 'popup') closePopup(); });
+  popup.addEventListener('click', e => {
+    if (e.target.id === 'popup') closePopup();
+  });
 
-  // === 表示トリガー ===
-  setTimeout(() => { if (popupData.count < 3) showPopup(); }, 10000);
+  // ======== 表示トリガー ======== //
+  // ① ページ滞在10秒後
+  setTimeout(() => {
+    if (popupData.count < 3) showPopup();
+  }, 10000);
+
+  // ② スクロール率80%以上
   window.addEventListener('scroll', () => {
     if (popupData.count >= 3) return;
     const scrollTop = window.scrollY || document.documentElement.scrollTop;

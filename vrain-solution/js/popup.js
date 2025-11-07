@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (path === '/demo/LP/' || path.endsWith('/demo/LP/index.html')) {
     // メインLP
-    PAGE_KEY = 'lp_main';
+    PAGE_KEY = 'lpai';
     IMAGES = [
       './img/popup-lp_a.png',
       './img/popup-lp_b.png',
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
   } else if (path.includes('/demo/LP/free-test/')) {
     // 無償テストLP
-    PAGE_KEY = 'lp_free';
+    PAGE_KEY = 'lpfree';
     IMAGES = [
       './../img/popup-test_a.png',
       './../img/popup-test_b.png',

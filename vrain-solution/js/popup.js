@@ -1,5 +1,3 @@
-// JavaScript Document
-
 // showPopup: display をセットしてからクラスを付与（アニメーションを発火）
 function showPopup() {
   if (!popup || popup.dataset.shown) return;

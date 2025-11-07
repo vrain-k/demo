@@ -52,17 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // メインLP
     PAGE_KEY = 'lpai';
     IMAGES = [
-      './img/popup-lp_a.png',
-      './img/popup-lp_b.png',
-      './img/popup-lp_c.png'
+      '../img/popup-lpai_a.png',
+      '../img/popup-lpai_b.png',
+      '../img/popup-lpai_c.png'
     ];
   } else if (path.includes('/demo/LP/free-test/')) {
     // 無償テストLP
     PAGE_KEY = 'lpfree';
     IMAGES = [
-      './../img/popup-test_a.png',
-      './../img/popup-test_b.png',
-      './../img/popup-test_c.png'
+      './../img/popup-lpfree_a.png',
+      './../img/popup-lpfree_b.png'
     ];
   } else {
     // 対象外ページでは処理しない

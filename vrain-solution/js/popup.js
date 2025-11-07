@@ -52,17 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // メインLP
     PAGE_KEY = 'lp_main';
     IMAGES = [
-      '../img/popup-lp_a.png',
-      '../img/popup-lp_b.png',
-      '../img/popup-lp_c.png'
+      './img/popup-lp_a.png',
+      './img/popup-lp_b.png',
+      './img/popup-lp_c.png'
     ];
   } else if (path.includes('/demo/LP/free-test/')) {
     // 無償テストLP
     PAGE_KEY = 'lp_free';
     IMAGES = [
-      '../../img/popup-test_a.png',
-      '../../img/popup-test_b.png',
-      '../../img/popup-test_c.png'
+      './../img/popup-test_a.png',
+      './../img/popup-test_b.png',
+      './../img/popup-test_c.png'
     ];
   } else {
     // 対象外ページでは処理しない

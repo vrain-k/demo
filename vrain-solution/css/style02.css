@@ -384,4 +384,105 @@ img {
 
 .main-contents {
   width: 850px;
+
+}
+
+/* ポップアップウインドウ表示 */
+/* 共通：オーバーレイ＋フェード */
+#popup {
+  position: fixed;
+  inset: 0;
+  display: flex;               /* 常にレイアウト存在させる方法も有り（下で制御） */
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+
+  opacity: 0;                  /* 初期は透明 */
+  pointer-events: none;        /* 非表示中はクリック無効 */
+  transition: opacity 0.6s ease;
+}
+
+/* 表示クラス */
+#popup.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ポップアップ本体 */
+#popup .popup__content {
+  position: relative;
+  background: transparent;
+  overflow: visible;
+  transform: scale(0.96);
+  transition: transform 0.45s ease, opacity 0.45s ease;
+  opacity: 0;
+}
+
+#popup.show .popup__content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* 画像 */
+#popup .popup__image {
+  width: 290px;
+  max-width: 90vw;
+  border-radius: 0;
+  display: block;
+}
+
+/* 閉じるボタン */
+#popup #popup-close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  color: #0E2B49;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* スマホ：右下スライド＋フェード（override） */
+@media (max-width: 767px) {
+  #popup {
+    inset: auto 15px 90px auto;
+    background: transparent;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* スライド用 */
+    transform: translateY(40px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #popup.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* スマホ用画像アニメ（補助） */
+  #popup .popup__image {
+    width: 200px;
+    max-width: 80vw;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    transition: transform 0.45s ease, opacity 0.45s ease;
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  #popup.show #popup__image {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* close ボタン位置 tweak */
+  #popup #popup-close { top: -10px; right: -10px; width: 28px; height: 28px; }
 }

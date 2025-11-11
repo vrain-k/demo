@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+
+.column--contents_cont {
+  margin-top: 80px;
+}
+
+.page__header {
+  background: #112c4b;
+  color: #ffff;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.page__header-title {
+  font-size: 1.5rem;
+}
+
+.inner {
+  position: relative;
+  margin: 0 auto;
+  width: 88.88889%;
+  max-width: 1200px;  
+}
+
+#bread_crumb {
+  background: rgba(0, 159, 218, 0.1);
+  color: #333333;
+  margin: 0;
+  height: 52px;
+  line-height: 52px;
+  overflow: hidden;  
+}
+
+#bread_crumb ul {
+  position: relative;
+  margin: 0 auto;
+  width: 88.88889%;
+  max-width: 1200px;
+}
+
+#bread_crumb li {
+  font-size: 12px;
+  display: inline;
+  padding: 0 5px 0 0;
+  line-height: 1.6;
+  position: relative;
+}
+
+.column_content-wrap {
+  margin: 80px auto;
+  width: 88.88889%;
+  max-width: 1000px;
+}
+
+.column_content-wrap h1 {
+  font-size: 1.75rem;
+  color: #fff;
+  background-color: #112c4b;
+  padding-left: 15px;
+  padding-bottom: 3px;
+  margin-bottom: 30px;
+  line-height: 2;
+}
+
+.column_content-wrap p {
+  text-align: justify;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.toc {
+  background-color: #f7f7f7;
+  border: 1px #d3d3d3 solid;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 740px;
+}
+
+.toc h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.toc ul {
+  list-style-type: none;
+}
+
+.toc ul li {
+  line-height: 2;
+}
+
+.ccw {
+  padding-top: 40px;
+}
+
+.ccw h2 {
+  border-bottom:  solid 5px #d3d3d3;
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.ccw h2::after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-bottom: solid 5px #0f2b49;
+  padding-bottom: 15px;
+  width: 8%;
+}
+
+.ccw h3 {
+  position: relative;
+  padding: 6px 15px;
+/*  background: transparent;*/
+  margin: 30px 0 15px 0;
+  font-size: 1.25rem;
+}
+
+/* 左線（上下で色分け） */
+.ccw h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px; /* 線の太さ */
+  height: 100%;
+  background: linear-gradient(to bottom, #0F2B49 50%, #207ACE 50%);
+  /* ↑上半分が紺、下半分が鮮やかな青 */
+}
+
+.ccw-ph {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 10px auto;
+}
+
+.ccw a {
+  color: #008b9c;
+  text-decoration: none;
+}
+
+.ccw a:hover {
+  color: #008b9c;
+  text-decoration: underline;
+}

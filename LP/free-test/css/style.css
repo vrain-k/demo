@@ -395,7 +395,7 @@ header {
   common
 ---------------------------------------------- */
 .cta__belt {
-  background-color: #0F2B49;
+  background-color: #207ACE;
   padding: 32.5px 0;
 }
 
@@ -472,7 +472,7 @@ header {
 ---------------------------------------------- */
   .cta__belt {
     width: 100%;
-    background-color: #0F2B49;
+    background-color: #207ACE;
     padding: 32.5px 0;
   }
 
@@ -587,7 +587,7 @@ header {
 .fv__text h1 {
   position: relative;
   font-size: 2.5rem;
-  color: #0F2B49;
+  color: #207ACE;
   margin-top: 15%;
   z-index: 2;
 }
@@ -675,7 +675,7 @@ header {
   .fv__text h1 {
     position: relative;
     font-size: 1.75rem;
-    color: #0F2B49;
+    color: #207ACE;
     margin-top: 0;
     padding-top: 30px;
     z-index: 2;

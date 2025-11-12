@@ -144,6 +144,11 @@
   text-decoration: none;
 }
 
+.ccw a:hover {
+  color: #008b9c;
+  text-decoration: underline;
+}
+
 /* 業界別導入事例 */
 .icb {
   display: grid;
@@ -256,9 +261,9 @@
 .icb-cta_link a {
   color: #008b9c;
   font-weight: 700;
+  text-decoration: none;
 }
 
-.ccw a:hover {
-  color: #008b9c;
+.icb-cta_link a:hover {
   text-decoration: underline;
 }

@@ -1463,6 +1463,10 @@ header {
   margin-bottom: 15px;
 }
 
+.offer__contents span {
+  background: linear-gradient(transparent 70%, #FDF411 50%);  
+}
+
 .offer__flow-box {
   border: 5px solid #0F2B49;
   margin-top: 60px;

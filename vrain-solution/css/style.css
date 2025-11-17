@@ -843,7 +843,7 @@ a[href^="tel:"] {
     transform: translateY(16px);
     opacity: 0;
   }
-  #popup.show #popup__image {
+  #popup.show .popup__image {
     transform: translateY(0);
     opacity: 1;
   }
@@ -851,3 +851,4 @@ a[href^="tel:"] {
   /* close ボタン位置 tweak */
   #popup #popup-close { top: -10px; right: -10px; width: 28px; height: 28px; }
 }
+

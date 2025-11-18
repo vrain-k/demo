@@ -259,6 +259,10 @@ img {
 }
 
 @media (max-width: 768px) {
+  .top-header__menu-inner {
+    display: none;
+  }
+  
   .page-header__logo-inner {
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -269,7 +273,7 @@ img {
     display: none;
   }
 /* ↓ハンバーガーメニュー↓ */
-  .hamburger-menu{
+  .hamburger-menu {
     display: block;
   }  
   .menu-btn {
@@ -327,7 +331,7 @@ img {
     transition: all 0.5s;
   }
   .menu-content ul {
-    padding: 70px 30px 0 30px;
+    padding: 90px 30px 0 30px;
   }
   .menu-content ul li {
     border-bottom: solid 1px #ffffff;
@@ -336,11 +340,11 @@ img {
   .menu-content ul li a {
     display: block;
     width: 100%;
-    font-size: 1.25rem;
+    font-size: 1rem;
     box-sizing: border-box;
     color:#ffffff;
     text-decoration: none;
-    padding: 20px 15px 20px 0;
+    padding: 15px 15px 15px 0;
     position: relative;
     transition: opacity 0.3s ease;
   }
@@ -745,13 +749,6 @@ a[href^="tel:"] {
   }
 }
 
-/* ↓ここは最後消す */
-@media (max-width: 768px) {
-  .top-header {
-    display: none;
-  }
-}
-
 /* ポップアップウインドウ表示 */
 /* 共通：オーバーレイ＋フェード */
 #popup {
@@ -851,4 +848,3 @@ a[href^="tel:"] {
   /* close ボタン位置 tweak */
   #popup #popup-close { top: -10px; right: -10px; width: 28px; height: 28px; }
 }
-

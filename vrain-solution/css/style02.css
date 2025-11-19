@@ -1,12 +1,19 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* サイト全体 */
+:root {
+  --main-bgcolor: #f1f1f1;
+  --main-fontcolor: #333333;
+  --main-color: #0f2b49;
+}
+
 html, body {
     font-family: "Noto Sans JP", sans-serif !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
-    color: #333333;
+    color: var(--main-fontcolor);
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, p, blockquote, table, th, td, a {
@@ -122,7 +129,7 @@ img {
 }
 
 .menu01-button03 {
-  background-color: #0F2B49;
+  background-color: var(--main-color);
 }
 
 .menu01-button03 a:hover {
@@ -190,7 +197,7 @@ img {
     justify-content: center;
     align-items: center;
     z-index: 90;
-    background-color: #0E2B49;
+    background-color: var(--main-color);
     border: 1px solid #fff;
   }
   .menu-btn span,
@@ -231,7 +238,7 @@ img {
     top: 0;
     left: 100%;
     z-index: 80;
-    background-color: #0E2B49;
+    background-color: var(--main-color);
     transition: all 0.5s;
   }
   .menu-content ul {
@@ -299,7 +306,7 @@ img {
   width: 35px;           /* アイコン幅固定 */
   height: 50px;
   background: #fff;
-  color: #03122D;
+  color: var(--main-color);
   overflow: hidden;
   cursor: pointer;
   transition: width 0.5s ease, background 0.3s ease; /* 横幅の滑らか変化 */
@@ -311,7 +318,7 @@ img {
 }
 /* li hover背景色 */
 .menu-item:hover {
-  background: #F1F1F1;
+  background: var(--main-bgcolor);
 }
 
 /* サイドメニュー hoverで li 横幅拡張 */
@@ -347,7 +354,7 @@ img {
 /* ページ下部CTA */
 .page__cta-container {
   width: 100%;
-  background-color: #0C2B4A;
+  background-color: var(--main-color);
   color: #fff;
   padding: 80px 0;
 }
@@ -441,7 +448,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  color: #0C2B4A;
+  color: var(--main-color);
   font-weight: bold;
   white-space: nowrap;
 }
@@ -509,7 +516,7 @@ img {
   }
   /* li hover背景色 */
   .menu-item:hover {
-    background: #F1F1F1;
+    background: var(--main-bgcolor);
   }
 
   /* アイコン */
@@ -534,7 +541,7 @@ img {
   } 
   a[href^="tel:"] {
       cursor: default;
-      color: #03122D !important;
+      color: var(--main-color) !important;
       text-decoration: none !important;
   }  
   /* ページ下部CTA */
@@ -752,7 +759,7 @@ img {
   position: absolute;
   top: -12px;
   right: -12px;
-  color: #0E2B49;
+  color: var(--main-color);
   background: #fff;
   border: none;
   border-radius: 50%;

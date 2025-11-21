@@ -107,6 +107,7 @@
   line-height: 2;
 }
 
+/* コラムページ */
 .ccw {
   padding-top: 40px;
 }
@@ -161,6 +162,53 @@
 .ccw a:hover {
   color: #008b9c;
   text-decoration: underline;
+}
+
+/* FAQページ */
+.fcw {
+  padding-top: 40px;
+}
+
+.fcw h2 {
+  border-bottom:  solid 5px #d3d3d3;
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.fcw h2::after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-bottom: solid 5px #0f2b49;
+  padding-bottom: 15px;
+  width: 8%;
+}
+
+.fcw h3 {
+  position: relative;
+  padding: 6px 15px;
+/*  background: transparent;*/
+  margin: 30px 0 15px 0;
+  font-size: 1.25rem;
+}
+
+/* 左線（上下で色分け） */
+.fcw h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px; /* 線の太さ */
+  height: 100%;
+  background: linear-gradient(to bottom, #0F2B49 50%, #207ACE 50%);
+  /* ↑上半分が紺、下半分が鮮やかな青 */
+}
+
+.fcw-ph {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 10px auto;
 }
 
 @media (max-width: 768px) {
@@ -264,12 +312,59 @@
     color: #008b9c;
     text-decoration: underline;
   }
+/* FAQページ */
+  .fcw {
+    padding-top: 40px;
+  }
+
+  .fcw h2 {
+    border-bottom:  solid 5px #d3d3d3;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+  }
+
+  .fcw h2::after {
+    position: absolute;
+    content: "";
+    display: block;
+    border-bottom: solid 5px #0f2b49;
+    padding-bottom: 15px;
+    width: 8%;
+  }
+
+  .fcw h3 {
+    position: relative;
+    padding: 6px 15px;
+  /*  background: transparent;*/
+    margin: 30px 0 15px 0;
+    font-size: 1.25rem;
+  }
+
+  /* 左線（上下で色分け） */
+  .fcw h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px; /* 線の太さ */
+    height: 100%;
+    background: linear-gradient(to bottom, #0F2B49 50%, #207ACE 50%);
+    /* ↑上半分が紺、下半分が鮮やかな青 */
+  }
+
+  .fcw-ph {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 10px auto;
+  }  
 }
 
 /* 業界別導入事例 */
 .category-select-wrapper {
   display: none;
 }
+
 #categoryFilter {
   margin: 80px auto 80px auto;
   width: 88.88889%;
@@ -593,6 +688,14 @@
     border-radius: 5px;    
   }
 
+  #categorySelect02 {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;    
+  }
+
   #categoryFilter {
     display: none;
   }  
@@ -774,5 +877,277 @@
 
   .icb-cta_link a:hover {
     text-decoration: underline;
-  }  
+  }    
+}
+
+/* アコーディオン */
+.accordion-box {
+  margin-top: 0;
+  margin-bottom: 50px;
+  width: 1000px;
+}
+.accordion-001 {
+  max-width: 100%;
+  border-bottom: #333 1px solid;
+  font-size: 1rem;
+  padding-bottom: 15px;
+  margin-top: 20px;
+}
+
+.accordion-001:not([open]) {
+  margin-bottom: 7px;
+}
+
+.accordion-001 summary {
+  position: relative;
+  display: flex;
+  align-items: center; /* ← 縦方向中央揃えだけ維持 */
+  color: #333;
+  font-weight: normal;
+  cursor: pointer;
+  text-align: left; /* ← 念のため左寄せ指定 */
+}
+
+.accordion-001 summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-001 summary::before {
+  content: "";
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: url("../img/icon-question.png") no-repeat center/contain;
+  margin-right: 10px;
+}
+
+.accordion-001 summary::after {
+  content: "";
+  position: absolute;   /* ← 絶対配置に変更！ */
+  right: 0;             /* ← 右端に寄せる */
+  top: 50%;             /* 縦中央 */
+  transform: translateY(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  border-bottom: 3px solid #333;
+  border-right: 3px solid #333;
+  transition: transform .3s;
+}
+
+.accordion-001[open] summary::after {
+  transform: translateY(-50%) rotate(225deg);
+}
+
+.accordion-001 summary-text {
+  flex: 1;
+  text-align: left; /* ← テキストだけ左寄せ */
+  display: block;
+}
+
+.accordion-001 p {
+  position: relative;
+  padding-left: 60px; /* ← アイコン幅＋マージン分 */
+  transform: translateY(-10px);
+  opacity: 0;
+  margin: 15px 25px 0 0;
+/*  padding-top: 1em;
+  padding-bottom: 1em;*/
+  color: #333;
+  font-weight: 700;
+  transition: transform 1s, opacity 1s;
+  font-size: 1rem;
+}
+
+.accordion-001 p a {
+  color: #008b9c;
+  text-decoration: none;
+}
+
+.accordion-001 p a:hover {
+  text-decoration: underline;
+}
+
+.accordion-001 p::before {
+  content: "";
+  position: absolute;
+  left: 0; /* p内の左端に固定 */
+  top: 0.3em; /* テキスト中央寄せ */
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/icon-answer.png");
+  background-size: contain;
+  background-repeat: no-repeat; 
+  margin-bottom: 10px;
+}
+
+.accordion-001[open] p {
+    transform: none;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+/* アコーディオン */
+  .accordion-box {
+    margin-top: 0;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .accordion-001 {
+    max-width: 100%;
+    border-bottom: #333 1px solid;
+    font-size: 1rem;
+    padding-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  .accordion-001:not([open]) {
+    margin-bottom: 7px;
+  }
+
+  .accordion-001 summary {
+    position: relative;
+    display: flex;
+    align-items: center; /* ← 縦方向中央揃えだけ維持 */
+    color: #333;
+    font-weight: normal;
+    cursor: pointer;
+    text-align: left; /* ← 念のため左寄せ指定 */
+    padding-right: 18px;
+  }
+
+  .accordion-001 summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .accordion-001 summary::before {
+    content: "";
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: url("../img/icon-question.png") no-repeat center/contain;
+    margin-right: 10px;
+  }
+
+  .accordion-001 summary::after {
+    content: "";
+    position: absolute;   /* ← 絶対配置に変更！ */
+    right: 0;             /* ← 右端に寄せる */
+    top: 50%;             /* 縦中央 */
+    transform: translateY(-50%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    border-bottom: 3px solid #333;
+    border-right: 3px solid #333;
+    transition: transform .3s;
+  }
+
+  .accordion-001[open] summary::after {
+    transform: translateY(-50%) rotate(225deg);
+  }
+
+  .accordion-001 summary-text {
+    flex: 1;
+    text-align: left; /* ← テキストだけ左寄せ */
+    display: block;
+  }
+
+  .accordion-001 p {
+    position: relative;
+    padding-left: 60px; /* ← アイコン幅＋マージン分 */
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 15px 0 0 0;
+  /*  padding-top: 1em;
+    padding-bottom: 1em;*/
+    color: #333;
+    font-weight: 700;
+    transition: transform 1s, opacity 1s;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .accordion-001 p a {
+    color: #008b9c;
+    text-decoration: none;
+  }
+
+  .accordion-001 p a:hover {
+    text-decoration: underline;
+  }
+
+  .accordion-001 p::before {
+    content: "";
+    position: absolute;
+    left: 0; /* p内の左端に固定 */
+    top: 0.3em; /* テキスト中央寄せ */
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/icon-answer.png");
+    background-size: contain;
+    background-repeat: no-repeat; 
+    margin-bottom: 10px;
+  }
+
+  .accordion-001[open] p {
+      transform: none;
+      opacity: 1;
+  }
+}
+
+.faq-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  max-width: 935px;  
+}
+
+.faq-list li {
+  position: relative;
+  border-radius: 5px;
+  padding: 10px 10px 30px 10px;
+  width: 280px;
+  border: 2px solid var(--main-color); 
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.faq-list li:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.faq-list a {
+  display: block;
+  color: inherit;
+}
+
+.faq-list a,
+.faq-list a:hover,
+.faq-list a:focus {
+  text-decoration: none !important;  
+}
+
+.faq-list li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  border-bottom: 3px solid var(--main-color);
+  border-right: 3px solid var(--main-color);
+  transition: transform .3s, border-color .3s;  
+}
+
+/* ホバー時に矢印の色も白に */
+.faq-list li:hover::after {
+  border-bottom-color: #fff;
+  border-right-color: #fff;
 }

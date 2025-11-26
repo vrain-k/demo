@@ -2113,7 +2113,7 @@ figure {
 }
 
 .contact__contents {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -2124,7 +2124,7 @@ figure {
 }
 
 .contact__base-box {
-  width: 1200px;
+  width: 100%;
   padding: 80px 100px 0 100px;
   background-color: #fff;
   margin-top: 60px;

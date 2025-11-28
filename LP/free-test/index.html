@@ -14,16 +14,16 @@
 </head>
 <body>
 <!-- ヘッダー -->  
-  <header>
+  <header id="top">
     <div class="header__box">
-      <div class="header__logo"><a href="#"><img src="img/logo-color.svg" alt="AI外観検査はVRAIN Solution"></a></div>
+      <div class="header__logo"><a href="https://vrain.co.jp/" target="_blank"><img src="img/logo-color.svg" alt="AI外観検査はVRAIN Solution"></a></div>
       <nav class="header__nav">
         <a href="#anxiety">AIに不安はありませんか？</a>
         <a href="#flow">無償ワークテストの<br class="sp-only">流れ</a>
         <a href="#offer">ご提案</a>
       </nav>
       <div class="nav__button">
-        <a href="#contact"><button class="nmb__y">無料でAI外観検査を試してみる</button></a>
+        <a href="https://vrain-k.github.io/demo/LP/free-test/" target="_blank"><button class="nmb__y">無料でAI外観検査を試してみる</button></a>
         <a href="#contact"><button class="nmb__g">まずは問い合わせする</button></a>
       </div>
     </div>
@@ -51,7 +51,7 @@
           <p>製造ラインでの異物混入やキズ、欠けなどの外観不良…。<br>
           「AIで検査できる」と聞いても、実際に自社ワークで精度が出るのか不安という声を多くいただきます。<br>
           当社では、実際の製品（ワーク）を使ってAIがどこまで検出できるかを無償でテスト。<br>
-          導入前に“ちゃんと異物が取れるか”、“スピードや精度は問題ないか”を確認いただけます。</p>
+          導入前に“ちゃんと異物が取れるか”、“誤検知や過検出は問題ないか”を確認いただけます。</p>
         </div>
       </div>  
     </section>
@@ -195,13 +195,17 @@
         </div>
       </div>
     </section>
+<!-- ページバナー -->
+    <div class="page-banner">
+      <a href="#contact"><img src="img/page-banner.jpg" alt="まずは問い合わせする"></a>
+    </div>  
 <!-- CTAベルト -->
-    <section class="cta__belt">
+<!--    <section class="cta__belt">
       <div class="cta__button">
         <a href="#contact"><button class="cmb__y">無料でAI外観検査を試してみる</button></a>
         <a href="#contact"><button class="cmb__g">まずは問い合わせする</button></a>
       </div>    
-    </section>  
+    </section>-->
 <!-- お問い合わせ -->
     <section class="contact__contents-box" id="contact">
       <div class="contact__contents">
@@ -209,26 +213,94 @@
           <h2 class="contact__title">お問い合わせ</h2>            
           <form>
             <div class="form-box">
-              <label class="label-name">会社名<span class="label-required">*</span></label><br>
-              <input type="text" />
+              <label class="label-name">会社名<span class="label-required"></span></label><br>
+              <input type="text" placeholder="例）株式会社 VRAIN Solution" />
             </div>
             <div class="form-box">
-              <label class="label-name">お名前<span class="label-required">*</span></label>
-              <input type="text" />
+              <label class="label-name">部署名</label><br>
+              <input type="text" placeholder="例）生産開発部" />
             </div>
             <div class="form-box">
-              <label class="label-name">日中つながりやすい電話番号<span class="label-required">*</span><br class="sp-only"><span>※携帯電話でも可能です</span></label>
-              <input type="text" />
+              <label class="label-name">役職</label><br>
+              <input type="text" placeholder="例）主任" />
             </div>
             <div class="form-box">
-              <label class="label-name">メールアドレス</label>
-              <input type="text" />
+              <label class="label-name">お名前<span class="label-required"></span></label>
+              <input type="text" placeholder="例）山田　太郎" />
             </div>
             <div class="form-box">
-              <label class="label-name">ご利用目的<span class="label-required">*</span></label><br>
+              <label class="label-name">日中つながりやすい電話番号<span class="label-required"></span><br class="sp-only"><span class="label-supplement">※携帯電話でも可能です</span></label>
+              <input type="text" placeholder="例）03-1234-5678" />
+            </div>
+            <div class="form-box">
+              <label class="label-name">メールアドレス<span class="label-required"></span></label>
+              <input type="text" placeholder="例）example@vrain.co.jp" />
+            </div>
+            <div class="form-box">
+              <label class="label-name">優先的に導入したい工場の地域</label><br>
+              <select name="prefecture">
+                <option value="選択してください" selected>選択してください</option>
+                <option value="北海道">北海道</option>
+                <option value="青森県">青森県</option>
+                <option value="秋田県">秋田県</option>
+                <option value="岩手県">岩手県</option>
+                <option value="山形県">山形県</option>
+                <option value="宮城県">宮城県</option>
+                <option value="福島県">福島県</option>
+                <option value="茨城県">茨城県</option>
+                <option value="栃木県">栃木県</option>
+                <option value="群馬県">群馬県</option>
+                <option value="埼玉県">埼玉県</option>
+                <option value="神奈川県">神奈川県</option>
+                <option value="千葉県">千葉県</option>
+                <option value="東京都">東京都</option>
+                <option value="山梨県">山梨県</option>
+                <option value="長野県">長野県</option>
+                <option value="新潟県">新潟県</option>
+                <option value="富山県">富山県</option>
+                <option value="石川県">石川県</option>
+                <option value="福井県">福井県</option>
+                <option value="岐阜県">岐阜県</option>
+                <option value="静岡県">静岡県</option>
+                <option value="愛知県">愛知県</option>
+                <option value="三重県">三重県</option>
+                <option value="滋賀県">滋賀県</option>
+                <option value="京都府">京都府</option>
+                <option value="大阪府">大阪府</option>
+                <option value="兵庫県">兵庫県</option>
+                <option value="奈良県">奈良県</option>
+                <option value="和歌山県">和歌山県</option>
+                <option value="鳥取県">鳥取県</option>
+                <option value="島根県">島根県</option>
+                <option value="岡山県">岡山県</option>
+                <option value="広島県">広島県</option>
+                <option value="山口県">山口県</option>
+                <option value="徳島県">徳島県</option>
+                <option value="香川県">香川県</option>
+                <option value="愛媛県">愛媛県</option>
+                <option value="高知県">高知県</option>
+                <option value="福岡県">福岡県</option>
+                <option value="佐賀県">佐賀県</option>
+                <option value="長崎県">長崎県</option>
+                <option value="熊本県">熊本県</option>
+                <option value="大分県">大分県</option>
+                <option value="宮崎県">宮崎県</option>
+                <option value="鹿児島県">鹿児島県</option>
+                <option value="沖縄県">沖縄県</option>
+                <hr class="form-hr">
+                <option value="海外">海外</option>                
+              </select>
+            </div>
+            <div class="form-box">
+              <label class="label-name">住所</label>
+              <input type="text" placeholder="例）〒104-6034 東京都中央区晴海 1-8-10" />
+            </div>            
+            <div class="form-box">
+              <label class="label-name">ご利用目的<span class="label-required"></span></label><br>
               <label><input type="radio" />無償テストを試してみたい</label><br>     
               <label><input type="radio" />導入を前向きに検討している</label><br>            
-              <label><input type="radio" />その他（自由記入）</label>              
+              <label><input type="radio" />その他</label>              
+              <input type="text" />
             </div>
             <div class="form-box">
               <label class="label-name">お問い合わせ内容の詳細</label>
@@ -246,17 +318,17 @@
     </section>
   </main>
 <!-- フッター -->    
+  <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>  
   <footer>
     <div class="footer-box">
       <img src="img/logo-white.svg" alt="AI外観検査はVRAIN Solution">
-      <p>コーポレートサイト</p>
+<!--      <p>コーポレートサイト</p> -->
     </div>
     <p class="copyright">&copy;&nbsp;2025 VRAIN Solution, Inc. All Rights Reserved.</p>    
   </footer>
-<a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>  
 <!-- 下部固定メニュー -->
-<div class="bottom-menu">
-  <a href="#contact" class="fmb__y-f">無料でAI外観検査を試してみる</a>
-</div>
+  <div class="bottom-menu">
+    <a href="#contact" class="fmb__y-f">無料でAI外観検査を試してみる</a>
+  </div>
 </body>
 </html>

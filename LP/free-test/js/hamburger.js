@@ -49,3 +49,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", checkFooterVisibility);
 });
+
+//toTOPをfooterで消える
+window.addEventListener("scroll", function () {
+  const pagetop = document.querySelector(".pagetop");
+  const footer = document.querySelector("footer"); // 適宜セレクタ変更
+
+  if (!pagetop || !footer) return;
+
+  const footerRect = footer.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  // 画面下端がフッターにかかり始めたら非表示
+  if (footerRect.top < windowHeight) {
+    pagetop.classList.add("is-hidden");
+  } else {
+    pagetop.classList.remove("is-hidden");
+  }
+});

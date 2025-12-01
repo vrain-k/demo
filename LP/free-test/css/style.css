@@ -1971,6 +1971,22 @@ header {
   margin: 0 auto 120px auto;
 }
 
+.page-banner_sp {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    display: none;
+  }
+  
+  .page-banner_sp {
+    display: block;
+    width: 80%;
+    margin: 0 auto 60px auto;
+  }
+}
+
 /* お問い合わせ */
 .contact__contents-box {
   background-color: #F3F5F9;  

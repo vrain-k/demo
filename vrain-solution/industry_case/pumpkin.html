@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/column.css">
+<title>【業界別導入事例】カボチャのヘタの自動除去システム構築</title>
+<script src="../js/scroll.js"></script>  
+</head>
+
+<body>
+	<header class="page-header scrolled">
+    <div class="page-header__logo-inner">
+      <a>
+        <img src="../img/logo-color.svg" alt="" id="logo">
+      </a>
+    </div>
+    <div class="page-header__menu-inner">
+      <nav class="menu">
+        <a>ソリューション</a>
+        <a>導入事例</a>
+        <a>採用情報</a>
+        <a>会社情報</a>
+        <a>IR情報</a>
+      </nav>
+      <div class="page-header__buttons">
+        <button class="page-header__menu-button">お問い合わせ</button>
+        <button class="page-header__menu-button">資料ダウンロード</button>
+        <button class="page-header__menu-button01">無償検証テストお申込</button>		  
+      </div>
+    </div>
+    <div class="hamburger-menu">
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+      <!-- ここからメニュー -->
+      <div class="menu-content">
+        <ul>
+          <li><a href="#about">AI外観検査とは？</a></li>
+          <li><a href="#features">製品の特徴</a></li>
+          <li><a href="#comparison">他社比較</a></li>
+          <li><a href="#question">よくあるご質問</a></li>
+          <li><a href="#freetest">無料テスト実施</a></li>
+        </ul>
+      </div>
+    </div>    
+	</header>  
+  <main class="industry--contents_cont">
+ 		<div class="side-menu">
+		  <ul>
+        <li class="menu-item menu-item_line">
+          <span class="icon">
+            <img src="../img/icon-side01.svg" alt="無償テスト申込">
+          </span>
+          <span class="label">無償テスト申込</span>
+        </li>
+        <li class="menu-item menu-item_line">
+          <span class="icon">
+            <img src="../img/icon-side02.svg" alt="ダウンロード">
+          </span>
+          <span class="label">ダウンロード</span>
+        </li>
+        <li class="menu-item menu-item_line">
+          <span class="icon">
+            <img src="../img/icon-side03.svg" alt="お問い合わせ">
+          </span>
+          <span class="label">お問い合わせ</span>
+        </li>
+        <li class="menu-item">
+          <span class="icon">
+            <img src="../img/icon-side04.svg" alt="03-6280-4915">
+          </span>
+          <span class="label"><a href="tel:0362804915">03-6280-4915</a></span>
+        </li>
+		  </ul>
+		</div>
+    <header id="page__header" class="page__header">
+      <div class="page__header-inner inner">
+        <h1 class="page__header-title">業界別導入事例</h1>
+      </div>
+    </header>
+    <div id="bread_crumb">
+      <ul>
+        <li>Home&nbsp;&nbsp;&nbsp;&nbsp;/ </li>
+        <li><a href="index.html">業界別導入事例</a>&nbsp;&nbsp;&nbsp;&nbsp;/ </li>
+        <li>カボチャのヘタの自動除去システム構築</li>
+      </ul>
+    </div>
+    <div class="industry_dcontent-wrap"><!-- contentsはじまり -->
+      <article>
+        <header>
+          <h1>カボチャのヘタの自動除去システム構築</h1>
+          <div class="icb-dlist">
+            <ul>
+              <li>業界：<a href="index.html?category=食品" class="category-link">食品</a></li>
+            </ul>
+          </div>        
+        </header>
+      </article>
+<!-- 本文 -->      
+      <div class="icb01"><!-- 背景薄い青 -->
+        <h2>ご相談内容</h2>
+        <div class="consul-box"><!-- 相談内容 -->
+          <div class="consul-lbox">
+            <h3>カボチャのヘタを自動除去したい</h3>
+            <p>現在、ルールベース検査を取り入れてヘタの位置情報を読み取り、ロボットと連携してヘタの自動除去システムを組んでいたが精度が低いためか、ヘタ以外の部分も余分に除去してしまう。そのため、現在は人の手で除去作業をしている状況。結果的に課題だった人件費の削減ができていない。</p>
+            <div class="consul-assignment">
+              <h4>課題</h4>
+              <div class="consul-assignment_list">
+                <ul>
+                  <li>導入している検査機の精度が低いため、現在は手作業で除去している</li>
+                  <li>人件費（採用費、育成費）を抑えたい</li>
+                </ul>
+              </div>  
+            </div>
+          </div>
+          <div class="consul-rbox">
+            <img src="img/img-pumpkin.png" alt="カボチャのヘタの自動除去システムのイメージ">
+          </div>
+        </div>  
+        <div class="problem-box">
+          <h5>現在の検査の問題点</h5>
+          <div class="flow-wrap">
+            <div class="flow-step">
+              <span class="step-num">1</span>
+              <p>画像撮影</p>
+            </div>
+            <div class="flow-step">
+              <span class="step-num">2</span>
+              <p>処理ソフトで座標出力</p>
+            </div>
+            <div class="flow-step">
+              <span class="step-num">3</span>
+              <p>ロボットに伝達</p>
+            </div>
+            <div class="flow-step error">
+              <span class="error-label">ERROR</span>
+              <span class="step-num">4</span>
+              <p>ロボットがヘタの除去</p>
+            </div>
+            <div class="flow-step">
+              <span class="step-num">5</span>
+              <p>人の手でヘタの除去</p>
+            </div>
+          </div>
+          <h5>ヘタの位置がずれてしまう要因</h5>
+          <p>ヒアリングの内容から、今回のようなヘタの位置を検出する検査では、ルールベース検査は不向きと考えます。<br>
+          理由として、ルールベース検査では濃淡差で検出するため、ヘタと似たような色の変色箇所やカビでも検出してしまう可能性があります。<br>
+          また、カボチャのような青果では、形・大きさ・色・ヘタの位置等、一つと同じものがないため、難易度が高く、正確な座標をうまく検出できないことが多いです。<br>
+          以上の理由から、ヘタの正確な位置情報をロボットに伝えられていないと考えます。</p>
+        </div>
+      </div>
+      <div class="solution-box">
+        <h2><span class="highlighter-line">この課題はVRAIN Solutionが解決します</span></h2>
+        <div class="solution-dbox">
+          <p>VRAIN Solution ではお客様からのご相談を解決するため、<span class="highlighter-line">サンプルの検証テストを無料で実施</span>しています。<br>
+          また、その過程で当社のメンバーが丁寧にヒアリングし、的確なソリューションをご用意いたします。実際にサービスに触れていただくことで<span class="highlighter-line">AIへの不安を払拭し、AI を導入する際のイメージの具体化をお手伝い</span>させていただきます。</p>
+        </div>
+      </div>  
+      <div class="icb02"><!-- 背景薄い青 -->
+        <h2>ご提案内容</h2>
+        <p>事前のヒアリングと検証により、カボチャは個体差や搬送時の姿勢ズレによってヘタ位置が一定せず、自動除去が難しいことが分かりました。<br>
+        そこで弊社では、画像認識によるヘタ位置検出と可動制御を組み合わせ、位置ズレを前提とした自動除去システムをご提案。無償ワークテストでは、実際のカボチャを用いて検出精度や除去可否を確認しました。</p>
+        <div class="problem-box">
+          <h5>提案する現場での活用方法</h5>
+          <div class="flow-wrap">
+            <div class="flow-step">
+              <span class="step-num">1</span>
+              <p>画像撮影</p>
+            </div>
+            <div class="flow-step error02">
+              <span class="error-label02">ヘタの座標を<br>正確に特定</span>
+              <span class="step-num">2</span>
+              <p>AI画像検査システム<br>「Phoenix」</p>
+            </div>
+            <div class="flow-step">
+              <span class="step-num">3</span>
+              <p>出力された座標を<br>ロボットに伝達</p>
+            </div>
+            <div class="flow-step">
+              <span class="step-num">4</span>
+              <p>ロボットがヘタを除去</p>
+            </div>
+          </div>
+          <h5>無償ワークテスト検査結果</h5>
+          <div class="result-box">
+            <div>
+              <h6>検査内容</h6>
+              <p>かぼちゃのヘタの検出可否</p>
+            </div>
+            <div>
+              <h6>検査要件</h6>
+              <p>製品ごとに特長の異なるかぼちゃのヘタを検出できること</p>
+            </div>
+          </div>  
+          <div class="result-box02">
+            <h6>検査結果</h6>
+            <p>現場で実際に撮影されている画像30枚を用いたワークテストで、一つひとつ特徴が異なるカボチャのヘタを100%検出することができました。<br>
+            少ないサンプルでも結果が良好だったため、追加で学習をしていくことで貴社が求められる検査基準にも対応可能と考えられます。検出位置の座標データも保持しており、ロボットへの座標をフィードバックして実装されたい自動除去システムの構築が可能となります。<br>
+            上記内容から既存検査機のまま高精度化を実現できると考えます。</p>
+          </div>          
+          <div class="result-box02">
+            <h5>私たちのご提案</h5>
+            <p>AIを活用した画像検査機の導入をオススメします。VRAIN SolutionのAI画像検査システム「Phoenix」では機械学習（ディープラーニング）を活用し、ヘタの情報を学習させることで、ヘタの位置を正確に検出できるようになります。学習後は異なる特徴のヘタでもロボットに正確な位置情報を送って、的確に除去することができます。<br>
+            現在使用しているカメラ・ロボットをそのまま活用し、AI画像検査機のみを新規導入することで、設備費用を抑えましょう。</p>
+          </div>
+          <div class="result-box02">
+            <h5>装置構成図</h5>
+            <div class="installation-img">
+              <img src="img/souchi-kousei.png" alt="">            
+            </div>
+          </div>
+          <div class="features-box">
+            <h6>外観検査機【Phoenix Eye】の特徴</h6>
+            <div class="features-imgbox">
+              <img src="img/phoenix-eye.png" alt="">        
+            </div>
+            <div class="features-textbox">
+              <ul>
+                <li>独自開発のAIアルゴリズムで高い検査精度を実現</li>
+                <li>少ない画像から始められ、検査とともに精度が向上</li>
+                <li>⾮常に簡単な操作で専⾨的な技術はいらない</li>
+                <li>希望する撮像条件に合わせてカメラ‧照明‧排出機構等機材</li>
+              </ul>
+              <p class="features-details">といった機材のご提案をワンストップでサポート</p>
+              <div class="features-details_title">
+                <a href="#"><p>Phoenix Eyeの詳細ページをもっと見る</p></a>          
+              </div>
+            </div>            
+          </div>
+        </div>
+        <div class="icb-cta_button icb-pt30">
+          <a href="#">
+            <button class="icb__y">無料でAI検査を試してみる</button>
+          </a>
+          <a href="#">
+            <button class="icb__n">まずは問い合わせする</button>
+          </a>
+        </div>        
+      </div><!-- 背景薄い青おわり -->
+      <div class="offer__flow-box">
+        <div class="offer__balloon"><h3>ワンストップでご提案</h3></div>
+        <ul>
+          <li class="offer__list-01">
+            <img src="img/offer-01.png" alt="問い合わせ" class="offer__img">
+            <h4>問い合わせ</h4>
+            <p>導入に関するご相談や資料請求を承ります。</p>
+          </li>
+          <li class="offer__list-02">
+            <img src="img/offer-02.png" alt="ヒアリング・ワークテスト" class="offer__img">
+            <h4>ヒアリング<br>ワークテスト</h4>
+            <p>現場の課題や検査項目をお伺いし、サンプルでAI検証を実施します。</p>
+          </li>
+          <li class="offer__list-03">
+            <img src="img/offer-03.png" alt="報告・見積もり" class="offer__img">
+            <h4>報告<br>見積もり</h4>
+            <p>検証結果をもとに、導入方法や費用をわかりやすくご提案します。</p>
+          </li>
+          <li class="offer__list-04">
+            <img src="img/offer-04.png" alt="導入" class="offer__img">
+            <h4>導入</h4>
+            <p>装置・AIシステムを現場に設置し、稼働開始までサポートします。</p>
+          </li>
+          <li class="offer__list-05">
+            <img src="img/offer-05.png" alt="運用支援" class="offer__img">
+            <h4>運用支援</h4>
+            <p>導入後も運用方法やトラブル対応まで、安心してご利用いただけます。</p>
+          </li>
+        </ul>
+        <div class="offer__balloon"><h3>無償ワークテストの流れ</h3></div>
+        <div class="testflow__text">
+          <p>AI外観検査システムの導入に不安がある方でも安心。<br>ご用意いただいたサンプルをお預かりし、VRAINが実際に無償ワークテストを行います。<br>結果はわかりやすく報告するので、初めての方でも安心してご利用いただけます。</p>
+        </div>
+        <div class="testflow__listbox">
+          <ul>
+            <li>
+              <img src="img/number-testflow01.png" alt="ヒアリング" class="flownum__img">
+              <h3>ヒアリング</h3>
+              <div class="testflow__img">
+                <img src="img/icon-testflow01.png" alt="ヒアリング">
+              </div>  
+              <p>現在の検査課題と、検査したい項目をお伺いします。</p>
+            </li>
+            <li>
+              <img src="img/number-testflow02.png" alt="ヒアリング" class="flownum__img">              
+              <h3>サンプル送付</h3>
+              <div class="testflow__img">              
+                <img src="img/icon-testflow02.png" alt="サンプル送付">
+              </div>
+              <p>検査対象のサンプルや検査画像をお送りください。</p>
+            </li>
+            <li>
+              <img src="img/number-testflow03.png" alt="ヒアリング" class="flownum__img">              
+              <h3>テスト実施</h3>
+              <div class="testflow__img">              
+                <img src="img/icon-testflow03.png" alt="テスト実施">
+              </div>
+              <p>ヒアリング内容をもとに、対象項目を検出できるかAIで検証します。</p>
+            </li>
+            <li>
+              <img src="img/number-testflow04.png" alt="ヒアリング" class="flownum__img">              
+              <h3>結果報告会</h3>
+              <div class="testflow__img">
+                <img src="img/icon-testflow04.png" alt="結果報告会">
+              </div>  
+              <p>検証結果と詳細を報告。必要に応じて、設備や導入の提案も行います。</p>
+            </li>
+          </ul>
+        </div>      
+      </div>      
+    </div>
+<!-- ページ用CTA -->    
+    <div class="icb-cta_box">
+      <div class="icb-cta_button">
+        <a href="#">
+          <button class="icb__y">無料でAI検査を試してみる</button>
+        </a>
+        <a href="#">
+          <button class="icb__n">まずは問い合わせする</button>
+        </a>
+      </div>
+    </div>
+<!-- 関連ページ -->
+    <div class="related-contents">
+      <h2 class="related-title_border">関連ページ</h2>
+      <div class="related-box">
+        <div><img src="img/banner_eye.png" alt="AI外観検査ソフトウェアPhoenixEye"></div>
+        <div><img src="img/banner_vision.png" alt="AI学習・検証ソフトウェアPhoenixVison"></div>
+      </div>
+    </div>
+<!-- 一覧ページへ戻る -->    
+    <p class="icb-cta_link"><a href="index.html">「業界別導入事例」へ戻る &#9654;</a></p>
+<!-- 共通CTA -->    
+    <div class="page__cta-container">
+      <div class="page__cta-box">
+        <h3>お問い合わせ</h3>
+        <hr>
+        <p>VRAIN Solutionでは“分からない”を丁寧に説明し<br>お客様に寄り添ったご提案をいたします</p>
+      </div>
+      <div class="page__cta-list">
+        <ul>
+          <li class="page__cta-libox icon-type1"><a><span>お問い合わせ</span></a></li>
+          <li class="page__cta-libox icon-type2"><a><span>資料ダウンロード</span></a></li>
+          <li class="page__cta-libox icon-type3"><a><span>無償テスト申込</span></a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </main>
+  <footer>
+    <img src="../img/footer.png" alt="">
+  </footer>
+  
+</body>
+</html>

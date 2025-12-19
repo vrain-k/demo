@@ -164,6 +164,22 @@
   text-decoration: underline;
 }
 
+.ccw table {
+  width: 100%;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  margin-bottom: 40px;
+}
+
+.ccw table th {
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;    
+}
+.ccw table td {
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;  
+}
+
 /* FAQページ */
 .fcw {
   padding-top: 40px;

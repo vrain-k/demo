@@ -1145,6 +1145,7 @@ p.features-details {
 }
 
 .offer__flow-box {
+  background-color: #fff;
   border: 3px solid #0F2B49;
   margin-top: 60px;
   padding: 60px;
@@ -2072,6 +2073,7 @@ p.features-details {
   }
 
   .offer__flow-box {
+    background-color: #fff;
     border: 3px solid #0F2B49;
     margin-top: 60px;
     padding: 30px;

@@ -1,13 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
-.column--contents_cont {
+.column--contents_cont { /* コラムページ用 */
   margin-top: 80px;
 }
 
-.industry--contents_cont {
+.industry--contents_cont { /* 業界別導入事例ページ用 */
   margin-top: 80px;
 }
+
+.faq--contents_cont { /* よくある質問ページ用 */
+  margin-top: 80px;
+}
+
 
 .page__header {
   background: #112c4b;
@@ -272,7 +277,7 @@
 
 .ccw a {
   color: #008b9c;
-  text-decoration: none;
+  text-decoration:  none;
 }
 
 .ccw a:hover {
@@ -305,6 +310,23 @@
 }
 
 /* FAQページ */
+.faq_content-wrap { /* 20251222 */
+  width: 88.88889%;
+  max-width: 1000px;
+  margin: 80px auto;
+}
+
+.faq_content-wrap h1 {
+  font-size: 1.75rem;
+  color: #fff;
+  background-color: #112c4b;
+/*  padding-left: 15px;
+  padding-bottom: 3px;
+  line-height: 2;*/
+  padding: 13px 20px 16px 20px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
 .fcw {
   padding-top: 40px;
 }
@@ -711,6 +733,7 @@
   font-weight: 900;
   color: #112C4B;
   text-align: center;
+/*  margin-top: 20px;*/
 }
 
 .icb01 h2::after {
@@ -720,6 +743,10 @@
   height: 3px;
   background-color: #112C4B;
   margin: 8px auto 40px; /* 中央寄せ */  
+}
+
+.mt60 {
+  margin-top: 60px;
 }
 
 .icb02 {
@@ -749,6 +776,7 @@
 .consul-box {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
 }
 
 .consul-box h3 {
@@ -763,6 +791,19 @@
 
 .consul-lbox {
   width: 690px;
+  display: flex;
+  flex-direction: column;
+}
+
+.consul-rbox {
+  width: 360px;
+}
+
+.consul-rbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .consul-assignment {
@@ -770,7 +811,7 @@
   border: solid 2px #084A93;
   background-color: #fff;
   align-items: center;
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 .consul-assignment h4 {
@@ -809,9 +850,6 @@
   background-color: #084A93;
   border-radius: 50%;    
 }
-.consul-rbox {
-  width: 360px;
-}
 
 .problem-box {
   border: solid 2px #084A93;
@@ -828,6 +866,40 @@
   color: #fff;
   font-size: 1rem;
   font-weight: 900;
+}
+
+/* 私たちのご提案 */
+.problem-box02 {
+  border: 3px solid #0F2B49;
+  background-color: #fff;
+  padding: 60px;
+  margin-top: 30px;
+}
+
+.problem-box02 h5 {
+  display: inline-block;
+  padding: 3px 15px 5px 15px;
+  margin-bottom: 10px;
+  background: #084A93;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.suggestion-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;  
+}
+
+.suggestion-lbox {
+  width: 690px;
+}
+
+
+.suggestion-rbox {
+  width: 360px;
+  
 }
 
 /* ステップ追加 */
@@ -1019,11 +1091,11 @@
 
 .features-box {
   position: relative;
-  border: solid 2px #084A93;
+  border: solid 3px #084A93;
   border-radius: 10px;
-  padding: 30px;
+  padding: 40px 30px 30px 30px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -1045,12 +1117,20 @@
 }
 
 .features-imgbox {
-  width: 300px;
+  width: 360px;
+}
+
+.features-imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .features-textbox {
   width: 630px;
   font-weight: 700;
+  display: flex;
+  flex-direction: column;
 }
 
 .features-textbox ul {
@@ -1061,6 +1141,7 @@
 .features-textbox li {
   position: relative;
   padding-left: 20px;
+  line-height: 1.8;
 }
 
 .features-textbox li::before{
@@ -1079,9 +1160,11 @@ p.features-details {
 }
 
 .features-details_title {
+/*  display: flex;*/
+  align-items: center;
+  margin-top: auto;
   position: relative;
   text-align: right;
-  margin-top: 20px;
   padding-right: 20px;
 }
 
@@ -1146,16 +1229,16 @@ p.features-details {
 
 .offer__flow-box {
   background-color: #fff;
-  border: 3px solid #0F2B49;
+  border: 0px solid #0F2B49;
   margin-top: 60px;
-  padding: 60px;
+  padding: 0px;
 }
 
 .offer__flow-box ul {
   position: relative;
   display: flex;
   padding-top: 80px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .offer__flow-box ul li {
@@ -1218,7 +1301,7 @@ p.features-details {
   max-height: 216px;
   background: #4DA6FF;
   color: #fff;
-  padding: 50px 20px 5px 20px;
+  padding: 50px 20px 20px 20px;
 }
 
 .offer__list-01::after {
@@ -1250,7 +1333,7 @@ p.features-details {
   max-height: 216px;
   background: #3790E7;
   color: #fff;
-  padding: 50px 20px 5px 20px;
+  padding: 50px 20px 20px 20px;
 }
 
 .offer__list-02::after {
@@ -1275,14 +1358,13 @@ p.features-details {
 .offer__list-02 p {
   text-align: justify;
   font-size: 0.9375rem;
-  padding-bottom: 10px;
 }
 
 .offer__list-03 {
   max-height: 216px;
   background: #207ACE;
   color: #fff;
-  padding: 50px 20px 5px 20px;
+  padding: 50px 20px 20px 20px;
 }
 
 .offer__list-03::after {
@@ -1314,7 +1396,7 @@ p.features-details {
   max-height: 216px;
   background: #18538C;
   color: #fff;
-  padding: 50px 20px 5px 20px;
+  padding: 50px 20px 20px 20px;
 }
 
 .offer__list-04::after {
@@ -1346,7 +1428,7 @@ p.features-details {
   max-height: 216px;
   background: #0F2B49;
   color: #fff;
-  padding: 50px 20px 5px 20px;
+  padding: 50px 20px 20px 20px;
 }
 
 .offer__list-05 h4 {
@@ -2075,9 +2157,9 @@ p.features-details {
 
   .offer__flow-box {
     background-color: #fff;
-    border: 3px solid #0F2B49;
+    border: 0px solid #0F2B49;
     margin-top: 60px;
-    padding: 30px;
+    padding: 0px;
   }
 
   .offer__flow-box ul {
@@ -2778,4 +2860,64 @@ p.features-details {
 .faq-list li:hover::after {
   border-bottom-color: #fff;
   border-right-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .faq-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style-type: none;
+    margin: 0 auto 60px auto;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    max-width: 935px;  
+  }
+
+  .faq-list li {
+    position: relative;
+    border-radius: 5px;
+    padding: 10px 10px 30px 10px;
+    width: 280px;
+    border: 2px solid var(--main-color); 
+    color: var(--main-color);
+    cursor: pointer;
+  }
+
+  .faq-list li:hover {
+    background-color: var(--main-color);
+    color: #fff;
+  }
+
+  .faq-list a {
+    display: block;
+    color: inherit;
+  }
+
+  .faq-list a,
+  .faq-list a:hover,
+  .faq-list a:focus {
+    text-decoration: none !important;  
+  }
+
+  .faq-list li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    border-bottom: 3px solid var(--main-color);
+    border-right: 3px solid var(--main-color);
+    transition: transform .3s, border-color .3s;  
+  }
+
+  /* ホバー時に矢印の色も白に */
+  .faq-list li:hover::after {
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+  }
 }
